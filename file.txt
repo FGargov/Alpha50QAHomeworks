@@ -1,0 +1,2 @@
+Hello world!
+I am writing to a text file :)

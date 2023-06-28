@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demos/01. Packages/01. Packages.iml" filepath="$PROJECT_DIR$/Demos/01. Packages/01. Packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demos/02. Static and Final Members/02. Static and Final Members.iml" filepath="$PROJECT_DIR$/Demos/02. Static and Final Members/02. Static and Final Members.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demos/03. Encapsulation/03. Encapsulation.iml" filepath="$PROJECT_DIR$/Demos/03. Encapsulation/03. Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demos/04. String Class/04. String Class.iml" filepath="$PROJECT_DIR$/Demos/04. String Class/04. String Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OOP part 2 and Strings.iml" filepath="$PROJECT_DIR$/.idea/OOP part 2 and Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Online Store/Online Store.iml" filepath="$PROJECT_DIR$/Online Store/Online Store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+    </modules>
+  </component>
+</project>
