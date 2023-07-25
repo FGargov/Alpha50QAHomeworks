@@ -1,0 +1,101 @@
+{
+  "id": "ecd9ce12-0d43-4711-b8ba-1038250d20f8",
+  "version": "2.0",
+  "name": "Google Search",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "c6975ec5-5b20-4aa0-93c7-4391f31ca955",
+    "name": "Verify Telerik Academy is top result in google search",
+    "commands": [{
+      "id": "a35175be-297f-4348-8eaa-983dc34d0bca",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43f91500-8d5c-4838-972d-e76471ca3b2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1254x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3581782e-4903-4cef-9083-b339404a3997",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f77f4dd9-d984-4197-83eb-196c21d9e0b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telerik academy"
+    }, {
+      "id": "7c0585d5-67dc-44f0-ba3a-9caf11932987",
+      "comment": "",
+      "command": "click",
+      "target": "css=form > div:nth-child(1)",
+      "targets": [
+        ["css=form > div:nth-child(1)", "css:finder"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "380f3b6f-616a-4d73-9fa8-8405722e5f36",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@name='btnK'])[2]",
+      "targets": [
+        ["css=center:nth-child(1) > .gNO89b", "css:finder"],
+        ["xpath=(//input[@name='btnK'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/center/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33a7de80-e63a-4e92-b017-20e6dfddaf0c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//h3)[1]",
+      "targets": [
+        ["css=.eKjLze .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Telerik Academy: Programming and Digital Training')]", "xpath:innerText"]
+      ],
+      "value": "Telerik Academy: Programming and Digital Training"
+    }, {
+      "id": "d4473eb4-5b8a-49ec-8480-ad8265e11022",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "df1a23a3-0f85-4c26-aa95-5b2e7d969780",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c6975ec5-5b20-4aa0-93c7-4391f31ca955"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

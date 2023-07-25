@@ -1,0 +1,310 @@
+{
+  "id": "eff8a9db-604a-4ce5-b835-6b8086c96aa6",
+  "version": "2.0",
+  "name": "First Automated Tests Homework",
+  "url": "https://www.saucedemo.com",
+  "tests": [{
+    "id": "2c6ee373-2b51-4aeb-84aa-516632300e4c",
+    "name": "Authenticate with valid credentials",
+    "commands": [{
+      "id": "0b1b136d-768f-41b3-a659-9ad0af1750df",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14d2df93-b0b0-4a7c-8e23-0bae2600da24",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b63404b3-97c5-4025-9b8c-c97043ebe5e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_credentials",
+      "targets": [
+        ["id=login_credentials", "id"],
+        ["css=#login_credentials", "css:finder"],
+        ["xpath=//div[@id='login_credentials']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3474362-9511-47c2-9084-2d66a8c3bfa6",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "standard_user"
+    }, {
+      "id": "1027ba51-ca30-48b0-9c86-d0cf9db07293",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "secret_sauce"
+    }, {
+      "id": "57946acd-59e9-46ef-aa10-8574de8906f1",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [
+        ["css=*[data-test=\"login-button\"]", "css:data-attr"],
+        ["id=login-button", "id"],
+        ["name=login-button", "name"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//input[@id='login-button']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89aa20e3-cf57-4f38-bbe7-12ba7d5ddb3d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=inventory_container",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a5807ecc-7183-4deb-a6a1-5edc79bb046e",
+    "name": "Authenticate with invalid credentials",
+    "commands": [{
+      "id": "32058b9b-41d6-414b-bab7-e1e5eb1f8940",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acbdf89d-fbc3-433d-8e95-c35164fa8098",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "137f7be6-f4a8-47b2-a52f-bad69d1135ff",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "standard_user"
+    }, {
+      "id": "ee014bb6-a730-41e3-875d-d3452a284af0",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "wrong_password"
+    }, {
+      "id": "1e9efcaf-b2d9-44c2-8803-e76bea62c0b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [
+        ["css=*[data-test=\"login-button\"]", "css:data-attr"],
+        ["id=login-button", "id"],
+        ["name=login-button", "name"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//input[@id='login-button']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "210ed80b-6c51-4908-a9e5-01a2ffff0f4c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h3[contains(@data-test,'error')]",
+      "targets": [
+        ["css=*[data-test=\"error\"]", "css:data-attr"],
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[3]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Epic sadface: Username and password do not match any user in this service')]", "xpath:innerText"]
+      ],
+      "value": "Epic sadface: Username and password do not match any user in this service"
+    }]
+  }, {
+    "id": "465f2bb8-6396-4046-a9fc-a7929f0a6d7c",
+    "name": "Add Product to Shopping Cart",
+    "commands": [{
+      "id": "518e3755-e634-43a0-be1e-d7ab6170cbd3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cb4ab13-3156-4834-937d-3ab6b503b3b3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3c0583c-9421-421a-b654-d13cc199091e",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "standard_user"
+    }, {
+      "id": "9e57e4ef-55dd-406a-97a6-55b64da11b43",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "secret_sauce"
+    }, {
+      "id": "5bc9e092-3056-413b-9409-2070af1ee83e",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [
+        ["css=*[data-test=\"login-button\"]", "css:data-attr"],
+        ["id=login-button", "id"],
+        ["name=login-button", "name"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//input[@id='login-button']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a0a4750-0aba-47ee-9939-fc539939871e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=inventory_container",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9557ecf2-3e84-4036-9d94-118ba3babd91",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(@id,'add-to-cart-sauce-labs-backpack')]",
+      "targets": [
+        ["css=*[data-test=\"add-to-cart-sauce-labs-backpack\"]", "css:data-attr"],
+        ["id=add-to-cart-sauce-labs-backpack", "id"],
+        ["name=add-to-cart-sauce-labs-backpack", "name"],
+        ["css=#add-to-cart-sauce-labs-backpack", "css:finder"],
+        ["xpath=//button[@id='add-to-cart-sauce-labs-backpack']", "xpath:attributes"],
+        ["xpath=//div[@id='inventory_container']/div/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "897717cf-93b8-4cf6-b4cb-c20be883c0f7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='shopping_cart_container']/a",
+      "targets": [
+        ["linkText=1", "linkText"],
+        ["css=.shopping_cart_link", "css:finder"],
+        ["xpath=//div[@id='shopping_cart_container']/a", "xpath:idRelative"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8ad6251-ef57-45d5-a8f4-b2032b20409f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72e009a3-f0e8-4f72-a307-b258e125a7a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-burger-menu-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "953037ed-f0c1-42b7-b02c-27fd15dd01d5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@id,'reset_sidebar_link')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "615ba114-dfe3-42d6-8f76-3025ce506082",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a31411ca-f931-48f1-942b-e83bab181567",
+    "name": "Authentication",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2c6ee373-2b51-4aeb-84aa-516632300e4c", "a5807ecc-7183-4deb-a6a1-5edc79bb046e"]
+  }, {
+    "id": "9eb4c7ba-249c-4164-93b3-cc8eab7fb53b",
+    "name": "Add Product",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["465f2bb8-6396-4046-a9fc-a7929f0a6d7c"]
+  }],
+  "urls": ["https://www.saucedemo.com/"],
+  "plugins": []
+}
