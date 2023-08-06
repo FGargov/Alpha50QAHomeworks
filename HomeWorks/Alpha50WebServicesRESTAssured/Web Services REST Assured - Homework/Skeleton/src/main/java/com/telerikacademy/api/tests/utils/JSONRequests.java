@@ -115,4 +115,10 @@ public class JSONRequests {
             "    }\n" +
             "  }\n" +
             "}";
+
+    public static final String CHANGE_TRANSITION = "{\n" +
+            "    \"transition\": {\n" +
+            "        \"id\": \"21\"\n" +
+            "    }\n" +
+            "}";
 }
