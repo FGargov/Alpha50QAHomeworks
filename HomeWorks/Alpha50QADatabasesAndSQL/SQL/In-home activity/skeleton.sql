@@ -10,11 +10,14 @@ SELECT first_name, last_name, salary
 FROM employees;
 
 -- 4. Write a SQL query that outputs the full name of each employee.
-SELECT CONCAT(first_name, ' ', last_name) AS full_name
+SELECT CONCAT(first_name, ' ', IFNULL(middle_name, ''),' ', last_name) AS full_name
 FROM employees;
 
 -- 5. Write a SQL query to generate an email addresses for each employee. Consider that the email domain is company.com. For example, John Doe's email would be "John.Doe@company.com". The produced column should be named "Full Email Addresses".
 SELECT CONCAT(first_name, '.', last_name, '@company.com') AS "Full Email Addresses"
+FROM employees;
+
+SELECT REPLACE(CONCAT(first_name, '.', last_name, '@company.com'), ' ', '') AS "Full Email Addresses"
 FROM employees;
 
 -- 6. Write a SQL query to find all the different employee salaries.
@@ -34,10 +37,10 @@ WHERE e.salary > m.salary;
 -- 9. Write a SQL query to find the names of all employees whose first name starts with "SA".
 SELECT first_name
 FROM employees
-WHERE first_name LIKE '%SA%';
+WHERE first_name LIKE 'SA%';
 
 -- 10. Write a SQL query to find the names of all employees whose last name contains "ei".
-SELECT first_name
+SELECT last_name
 FROM employees
 WHERE last_name LIKE '%ei%';
 
@@ -54,8 +57,27 @@ SELECT * FROM employees
 WHERE manager_id IS NULL;
 
 -- 14. Write a SQL query to find the names of all employees who were hired before their managers.
-SELECT * FROM employees e
-  JOIN employees m ON e.employee_id = m.employee_id
+
+/*Тази заявка е обратното на това, което се иска и е грешно:*/
+SELECT CONCAT(e.first_name, e.last_name) AS 'Employee names'
+FROM employees e, employees m
+WHERE e.employee_id = m.manager_id
+  AND e.hire_date < m.hire_date;
+/*Тази заявка е правилна*/
+SELECT CONCAT(e.first_name, e.last_name) AS 'Employee names'
+FROM employees e, employees m
+WHERE m.employee_id = e.manager_id
+  AND e.hire_date < m.hire_date;
+/*Тази заявка е правилна*/
+SELECT CONCAT(e.first_name, e.last_name) AS 'Employee names'
+FROM employees e, employees m
+WHERE e.manager_id = m.employee_id
+  AND e.hire_date < m.hire_date;
+
+SELECT e.first_name, e.last_name, e.hire_date as 'Employee hire date',
+       m.hire_date AS 'Manager hire date'
+FROM employees e
+         LEFT JOIN employees m ON e.manager_id = m.employee_id
 WHERE e.hire_date < m.hire_date;
 
 -- 15. Write a SQL query to find all employees whose salary is more than 50000. Order them in decreasing order, based on their salary.
@@ -69,32 +91,44 @@ ORDER BY salary DESC
 LIMIT 5;
 
 -- 17. Write a SQL query that outputs all employees along their address.
-SELECT e.*, a.*
+SELECT e.employee_id, e.first_name, e.last_name, t.name AS 'City', a.text AS 'Address'
 FROM employees e
- JOIN addresses a on e.address_id = a.address_id;
+         JOIN addresses a ON e.address_id = a.address_id
+         JOIN towns t on a.town_id = t.town_id;
 
 -- 18. Write a SQL query to find all employees whose middle name is the same as the first letter of their town.
-SELECT e.first_name, e.middle_name, e.last_name, t.name
+SELECT e.first_name, e.middle_name, e.last_name, t.name AS town
 FROM employees e
          JOIN addresses a on e.address_id = a.address_id
          JOIN towns t on a.town_id = t.town_id
 WHERE e.middle_name = LEFT(t.name, 1);
 
+SELECT e.first_name, e.middle_name, e.last_name, t.name AS town
+FROM employees e
+         JOIN addresses a on e.address_id = a.address_id
+         JOIN towns t on a.town_id = t.town_id
+WHERE middle_name = SUBSTR(name, 1, 1);
+
 -- 19. Write a SQL query that outputs all employees (first and last name) that have a manager, along with their manager (first and last name).
 SELECT e.first_name, e.last_name, m.first_name AS manager_first_name,
        m.last_name AS manager_last_name
 FROM employees e
-   JOIN employees m ON e.manager_id = m.employee_id;
+         JOIN employees m ON e.manager_id = m.employee_id;
+
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Employee name',
+       CONCAT(m.first_name, ' ', m.last_name) AS 'Manager name'
+FROM employees e
+         JOIN employees m ON e.manager_id = m.employee_id;
 
 -- 20. Write a SQL query that outputs all employees that have a manager (first and last name), along with their manager (first and last name) and the employee's address.
 
-select e.first_name as employee_first_name, e.last_name as employee_last_name,
-       m.first_name as manager_first_name, m.last_name as manager_last_name,
-       a.text as address
-from employees e
-         join employees m on e.manager_id = m.employee_id
-         join addresses a on e.address_id = a.address_id
-order by e.employee_id;
+SELECT e.first_name AS employee_first_name, e.last_name AS employee_last_name,
+       m.first_name AS manager_first_name, m.last_name AS manager_last_name,
+       a.text AS address
+FROM employees e
+         JOIN employees m ON e.manager_id = m.employee_id
+         JOIN addresses a ON e.address_id = a.address_id
+ORDER BY e.employee_id;
 
 -- 21. Write a SQL query to find all departments and all town names in a single column.
 SELECT name FROM departments
@@ -103,12 +137,23 @@ SELECT name FROM towns;
 
 -- 22. Write a SQL query to find all employees and their manager, along with the employees that do not have manager. If they do not have a manager, output "n/a".
 SELECT e.first_name, e.last_name, COALESCE(m.first_name, 'n/a') AS manager_first_name,
-   COALESCE(m.last_name, 'n/a') AS manager_last_name
+       COALESCE(m.last_name, 'n/a') AS manager_last_name
 FROM employees e
-    LEFT JOIN employees m ON e.manager_id - m.employee_id;
+         LEFT JOIN employees m ON e.manager_id = m.employee_id;
+
+SELECT e.employee_id,
+       CONCAT(e.first_name, ' ', e.last_name) AS Employee,
+       m.employee_id AS ManagerID,
+       CASE
+           WHEN e.manager_id IS NULL THEN 'n/a'
+           ELSE CONCAT(m.first_name, ' ', m.last_name)
+           END AS Manager
+FROM employees m
+         RIGHT JOIN Employees e
+                    ON e.manager_id = m.employee_id;
 
 -- 23. Write a SQL query to find the names of all employees from the departments "Sales" AND "Finance" whose hire year is between 1995 and 2005.
-SELECT e.first_name, e.last_name
+SELECT e.first_name, e.last_name, e.hire_date
 FROM employees e
-    JOIN departments d ON e.department_id = d.department_id
+         JOIN departments d ON e.department_id = d.department_id
 WHERE d.name IN ('Sales', 'Finance') AND YEAR(e.hire_date) BETWEEN 1995 AND 2005;
