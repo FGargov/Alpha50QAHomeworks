@@ -3,7 +3,7 @@ package com.telerikacademy.api.tests.utils;
 public class Constants {
     public static final String BASE_URL = "https://fgargov.atlassian.net";
     public static final String EMAIL = "fgargov@gmail.com";
-    public static final String TOKEN = "ATATT3xFfGF0wm9ZcQTOrtmv1OmG3Bkn8xCU1SraTwocBIA9qynQ1bIx03Py3kN3-w-rOhzNYG8QzNQyWLCTJBarYs6g8uwEGwx4PXpd9Riw9HYJ8iJyOuDxDaZ4RKGIgEnh-cGsZtQ_jefTAcNN30kaz7ZIMZi7oldQxj8EFSi2brzF-4POw7I=BBA6A1AA";
+    public static final String TOKEN = "ATATT3xFfGF0wNo5Qah5Km3ste-6RYVnvgT5uDhR4Pk4dP4Dea4P2Z5HBuLPkWHWLmeq0B_9wRvr6F1RaQi3WXxkgIZabJsz_Jm-SPRu4cv_cBiIqsjEh7KE6ipMgABVUv_HH2insiTSxG89UI8OOZmahpK4ra0kvq84dxqsvKgt94N_sl3yiWg=7CC7525E";
     public static final String USER_ID = null;
 
     public static final String PROJECT_KEY = "PAH";

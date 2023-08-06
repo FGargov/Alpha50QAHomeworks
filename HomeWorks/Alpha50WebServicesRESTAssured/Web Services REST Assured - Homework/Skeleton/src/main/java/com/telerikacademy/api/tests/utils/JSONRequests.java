@@ -40,13 +40,26 @@ public class JSONRequests {
             "}";
 
 
-    public static final String JSON_STRING = "{\n" +
-            "    \"Description\": \"As a potential customer,\\n\\nI want to type in the website URL in a browser,\\n\\nAnd visit the website so that I can browse the content.\",\n" +
-            "    \"Preconditions\": \"The following steps are done after opening Chrome, Firefox, and Edge browsers (latest versions):\",\n" +
-            "    \"Steps to reproduce\": \"Navigate to the URL box of the browser\\nType in phptravels.net\\nPress Enter\",\n" +
-            "    \"Expected results\": \"The website should be loaded and displayed.\",\n" +
-            "    \"Actual results\": \"A message is displayed stating \\\"NO RESPONSE FROM API SERVER.\\\"\",\n" +
-            "    \"Environment\": \"Chrome, Firefox, and Edge (latest versions)\"\n" +
+    public static final String CREATE_STORY_TWO = "  {\n" +
+            "    \n" +
+            "    \"fields\": {\n" +
+            "        \"issuetype\": {\n" +
+            "            \"name\": \"Story\" \n" +
+            "        },\n" +
+            "\n" +
+            "        \"project\": {\n" +
+            "            \"key\": \"PAH\"\n" +
+            "        },\n" +
+            "       \n" +
+            "        \"priority\": {   \n" +
+            "            \"name\": \"Highest\"\n" +
+            "        },\n" +
+            "\n" +
+            "        \"description\": \"As potential customer, looking for travels around the world, \\n\\nand knowing about phptravels.net,\\n\\nI want to type in the website url in a browser\\n\\nAnd visit the website so that I can browse the content\",\n" +
+            "       \n" +
+            "        \"summary\": \"Visit PhpTravels.Net and browse through the content of the website\"\n" +
+            "       \n" +
+            "    }\n" +
             "}";
 
     public static final String CREATE_BUG = "{" +

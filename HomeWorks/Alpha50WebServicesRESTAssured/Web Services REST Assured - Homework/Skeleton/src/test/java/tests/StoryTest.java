@@ -8,6 +8,7 @@ import org.junit.Test;
 import static com.telerikacademy.api.tests.utils.Constants.*;
 import static com.telerikacademy.api.tests.utils.Endpoints.ISSUE_ENDPOINT;
 import static com.telerikacademy.api.tests.utils.JSONRequests.CREATE_STORY;
+import static com.telerikacademy.api.tests.utils.JSONRequests.CREATE_STORY_TWO;
 import static io.restassured.RestAssured.given;
 
 public class StoryTest {
@@ -17,7 +18,7 @@ public class StoryTest {
                 .baseUri(BASE_URL + ISSUE_ENDPOINT)
                 .auth().preemptive().basic(EMAIL, TOKEN)
                 .header("Content-Type", "application/json")
-                .body(CREATE_STORY);
+                .body(CREATE_STORY_TWO);
 
         Response response = request.post();
 

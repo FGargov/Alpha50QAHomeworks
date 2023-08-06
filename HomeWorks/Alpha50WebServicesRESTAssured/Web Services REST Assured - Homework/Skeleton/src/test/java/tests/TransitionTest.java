@@ -27,4 +27,19 @@ public class TransitionTest {
 
         Assert.assertNotNull("Response body is null", response.getBody());
     }
+
+    @Test
+    public void correctTransitionReturn_when_getByStoryKeyTransition(){
+        RequestSpecification request = given()
+                .baseUri(BASE_URL)
+                .auth().preemptive().basic(EMAIL, TOKEN)
+                .header("Content-Type", "application/json");
+
+        Response response = request.get(ISSUE_ENDPOINT + "/" + STORY_KEY + "/" + "transitions");
+
+        Assert.assertEquals(200, response.getStatusCode());
+        System.out.println("Status code: " + response.getStatusCode());
+
+        Assert.assertNotNull("Response body is null", response.getBody());
+    }
 }
