@@ -3,12 +3,12 @@ package Utils;
 public class Constants {
 
     /*JIRA API constants*/
-    public static final String EMAIL = "diana.gospodinova@telerikacademy.com";
-    public static final String JIRA_API_TOKEN = "G85dSg7ZPHHaDsVIl7QT7897";
-    public static final String BASE_URL = "https://xray-demo-project-a50.atlassian.net";
-    public static String DEFAULT_ACCOUNT_ID = "62431715f407980070551481";
+    public static final String EMAIL = "fgargov@gmail.com";
+    public static final String JIRA_API_TOKEN = "ATATT3xFfGF0iwRe-jlx3QNfd9UUtf4TwsrrG-OS8mPNa40x5qqKOKix8tkd6INx53kGYA3EU61qppvhZl9xQN8SQnAs_8_0wrs0W3cpn94wmcztbO-cNNKFA_N7-9Ixpf1sxgZufkCH3XC6QlH4uJB97aUcVAHoFj-xpkUrT4EfXBjdIHKrBYs=481F7C21";
+    public static final String BASE_URL = "https://fgargov.atlassian.net";
+    public static String DEFAULT_ACCOUNT_ID = "557058:5dfb38de-07c5-4daa-9951-a80fdd626dab";
     public static String ACCOUNT_ID;
-    public static final String PROJECT_KEY = "XD";
+    public static final String PROJECT_KEY = "PAH";
 
     public static final String STORY_SUMMARY = "Create JIRA story homework";
     public static final String BUG_SUMMARY = "Staging forum is not available";
