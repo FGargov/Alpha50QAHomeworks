@@ -1,0 +1,169 @@
+@import "https://fonts.google.com/selection?selection.family=Lato";
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg,
+    rgba(253,149,192,1) 0%,
+    rgba(195,95,204,1) 38%,
+    rgba(175,104,241,1) 66%,
+    rgba(175,104,241,1) 84%,
+    rgba(168,125,255,1) 100%) no-repeat center;
+}
+
+main {
+    border-radius: 20px;
+    padding: 50px;
+    width: 1000px;
+    margin-left: 250px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background: #2D3154;
+    color: #ffffff;
+}
+
+li.card-type {
+    display: inline-block;
+    margin: -50px 10px 20px 10px;
+    padding: 5px 1px 5px 5px;
+    border-radius: 12px;
+    width: 230px;
+    height: 300px
+}
+
+ul.cards {
+    margin-left: 60px;
+}
+
+.plan-types li:first-of-type h1 {
+    background: url('img/plan-background-basic.png') no-repeat center;
+    background-size: 230px 160px;
+    width: 140px;
+    height: 100px;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 30px 0px 30px 84px;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-radius: 12px;
+}
+
+.plan-types li:nth-of-type(2) h1 {
+    background: url('img/plan-background-pro.png') no-repeat center;
+    background-size: 230px 160px;
+    width: 140px;
+    height: 100px;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 30px 0px 30px 84px;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-radius: 12px;
+}
+
+.plan-types li:nth-of-type(3) h1 {
+    background: url('img/plan-background-med.png') no-repeat center;
+    background-size: 230px 160px;
+    width: 140px;
+    height: 100px;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 30px 0px 30px 84px;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-radius: 12px;
+}
+
+li.card-type {
+    background: #ffffff
+}
+
+ul li h2 {
+    color: #1C2546;
+    font-size: 3.7rem;
+    margin-top: -30px;
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+
+ul li h2:first-letter {
+    font-size: 2.6rem;
+}
+
+ul li p.plan {
+    color: #1C2546;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+
+ul li button {
+    display: block;
+    background: linear-gradient(45deg,
+    rgba(253,149,192,1) 0%,
+    rgba(195,95,204,1) 38%,
+    rgba(175,104,241,1) 66%,
+    rgba(175,104,241,1) 84%,
+    rgba(168,125,255,1) 100%) no-repeat center;
+    border-radius: 50px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+ul li button.chosen-plan {
+    background: #805CFC;
+}
+
+div h3.plan-title {
+    text-transform: capitalize;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.title {
+    color: #ffffff;
+}
+
+.information {
+    color:#ffffff;
+}
+
+div.information p  {
+    width:500px;
+    font-size:13px;
+    margin-left: 70px;
+}
+
+div .continue {
+    background:linear-gradient(45deg,
+    rgba(253, 149, 192, 1) 0%,
+    rgba(195, 95, 204, 1) 38%,
+    rgba(175, 104, 241, 1) 66%,
+    rgba(175, 104, 241, 1) 84%,
+    rgba(168, 125, 255, 1) 100%);
+    border-style: none;
+    border-radius: 10px;
+    width: 130px;
+    padding: 14px;
+    margin-left: 425px;
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+div .continue:hover {
+    background: linear-gradient(45deg, #fcecfc 0%,#f9cfa7 26%,#f79688 42%,#f4a777
+    64%,#f26d1a 97%,#f26d1a 97%,#f26d1a 97%,#f26d1a 99%,#e88d76 99%,#f26d1a 100%);
+    color: #ffffff;
+}

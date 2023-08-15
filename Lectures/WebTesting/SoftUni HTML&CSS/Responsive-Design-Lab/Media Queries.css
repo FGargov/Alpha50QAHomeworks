@@ -1,0 +1,36 @@
+.box {
+    display: inline-block;
+    background: #ff882e;
+    text-align: center;
+    line-height: 2.5em;
+    color: #ffffff;
+    font-size: 2em;
+    width: 245px;
+    height: 245px;
+}
+
+@media screen and (max-width: 1024px) {
+    .box {
+        width: 200px;
+        height: 200px;
+        background: #143cff;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .box {
+        width: calc(50% - 10px);
+        border: 1px solid #1907ff;
+        background: #a97c36;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        display: block;
+        width: 100%;
+        background: #fff60e;
+        color: #1907ff;
+    }
+}

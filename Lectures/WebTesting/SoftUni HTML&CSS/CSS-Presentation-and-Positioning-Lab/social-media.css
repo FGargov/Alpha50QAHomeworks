@@ -1,0 +1,75 @@
+ul, li, div, section, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(41, 41, 41);
+}
+
+footer {
+    height: 150px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+section {
+    float: left;
+    margin-left: 10px;
+    padding: 20px;
+    height: 150px;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(181, 180, 152);
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+footer > section > div div {
+    width: 70px;
+    height: 58px;
+    background: url("http://i.imgur.com/1GouiUw.jpg");
+    display: inline-block;
+}
+
+.facebook {
+    background-position: -2px 2px;
+}
+
+.youtube {
+    background-position: -512px 2px;
+}
+
+.linkedin {
+    background-position: -194px 2px;
+}
+
+.twitter {
+    background-position: -66px 2px;
+}
+
+.facebook:hover {
+    background-position: -2px 62px;
+}
+
+.linkedin:hover {
+    background-position: -194px 62px;
+}
+
+.youtube:hover {
+    background-position: -512px 62px;
+}
+
+.twitter:hover {
+    background-position: -66px 62px;
+}

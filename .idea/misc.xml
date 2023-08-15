@@ -8,12 +8,10 @@
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Web Services REST Assured - Homework/Skeleton/pom.xml" />
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Homework Solution/pom.xml" />
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Practice I/Practice I/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/PracticeII/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/WebServicesExam/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Exam - Trello/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/Lectures/WebTesting/Web Services REST Assured Demo/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="20" project-jdk-type="JavaSDK">

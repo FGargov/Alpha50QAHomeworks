@@ -1,0 +1,18 @@
+form:last-of-type {
+    background: #F1F1F1;
+    border-radius: 5px;
+    width: 200px;
+}
+
+fieldset {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+fieldset input {
+    margin-top: 3px;
+}
+
+fieldset legend {
+    margin-bottom: 13px;
+}

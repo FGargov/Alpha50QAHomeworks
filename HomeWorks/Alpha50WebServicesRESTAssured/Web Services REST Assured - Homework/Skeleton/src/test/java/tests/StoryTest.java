@@ -1,5 +1,6 @@
 package tests;
 
+import base.BaseTestSetup;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
@@ -7,13 +8,16 @@ import org.junit.Test;
 
 import static com.telerikacademy.api.tests.utils.Constants.*;
 import static com.telerikacademy.api.tests.utils.Endpoints.ISSUE_ENDPOINT;
-import static com.telerikacademy.api.tests.utils.JSONRequests.CREATE_STORY;
-import static com.telerikacademy.api.tests.utils.JSONRequests.CREATE_STORY_TWO;
+import static com.telerikacademy.api.tests.utils.Helper.isValid;
+import static com.telerikacademy.api.tests.utils.JSONRequests.*;
 import static io.restassured.RestAssured.given;
 
-public class StoryTest {
+
+public class StoryTest extends BaseTestSetup {
     @Test
     public void correctDataReturned_when_createStory() {
+        org.testng.Assert.assertTrue(isValid(CREATE_STORY_TWO), "Body is not a valid JSON");
+
         RequestSpecification request = given()
                 .baseUri(BASE_URL + ISSUE_ENDPOINT)
                 .auth().preemptive().basic(EMAIL, TOKEN)

@@ -1,0 +1,27 @@
+main {
+    width: 400px;
+    text-align: justify;
+}
+
+.left, .right, .center {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #6395EC;
+}
+
+.left {
+    float: left;
+    margin-right: 10px;
+}
+
+.right {
+    float: right;
+    margin-left: 10px;
+}
+
+.center {
+    margin: 0 auto;
+}

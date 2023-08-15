@@ -1,0 +1,130 @@
+@media all and (min-width: 731px) and (max-width: 1200px) {
+    #wrapper {
+        width: auto;
+        padding: 0 60px;
+    }
+
+    header {
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header nav ul li {
+        width: 20%;
+    }
+
+    main {
+        width: auto;
+    }
+
+    main section {
+        width: auto;
+        margin: 30px 30px;
+    }
+
+
+    main section div article {
+        width: auto;
+        padding: 10px;
+        float: none;
+    }
+
+    main aside {
+        width: auto;
+        margin: 0 30px;
+    }
+
+    main aside article {
+        margin-right: 1px;
+    }
+
+    footer {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    footer p{
+        margin: 30px auto;
+        text-align: center;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 730px) {
+    #wrapper {
+        width: auto;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    header {
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header > nav > ul > li:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    main {
+        width: auto;
+        overflow: auto;
+        padding: 30px;
+    }
+    main section {
+        width: 100%;
+        margin: 0;
+    }
+
+    main section > div > div{
+        width: inherit;
+        background-repeat: no-repeat;
+        background-color: #b7cc89;
+        background-position: center;
+    }
+
+    main > section > div > article {
+        width: auto;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    main > section > div > article > h3{
+        text-align: center;
+    }
+
+    main > section > div > div{
+        margin: 0 auto;
+    }
+
+    main aside{
+        margin: 0;
+        width: auto;
+    }
+
+    main > aside > article{
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+
+    main > aside > article > h1{
+        text-align: center;
+    }
+
+    main > aside > article > h2{
+        text-align: center;
+    }
+
+    footer{
+        width: 100%;
+    }
+    footer p{
+        margin: 30px auto;
+        text-align: center;
+    }
+}

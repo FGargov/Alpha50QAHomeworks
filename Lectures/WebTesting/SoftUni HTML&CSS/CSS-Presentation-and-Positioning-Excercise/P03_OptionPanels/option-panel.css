@@ -1,0 +1,96 @@
+* { box-sizing: border-box; }
+
+@font-face {
+    src: url('fonts/fonts.css');
+    font-family: Roboto;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    color: #191923;
+    background: #CACACA;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+nav {
+    background: #FFFFFF;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 35px 10px 35px 10px;
+    position: relative;
+    left: -22px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover {
+    color: #bf1363;
+}
+
+.first-a {
+    color: #bf1363;
+}
+
+li:first-of-type {
+    text-transform: capitalize;
+}
+
+li:nth-of-type(2) {
+    text-transform: uppercase;
+}
+
+li:nth-of-type(3) {
+    text-transform: uppercase;
+}
+
+section {
+    display: inline-block;
+    background: #FFFFFF;
+    width: 236px;
+    height: 290px;
+    float: left;
+    margin: 20px 7px;
+}
+
+section img {
+    width: 236px;
+    height: 180px;
+}
+
+section h1 {
+    font-size: 100%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    position: relative;
+    top: -14px;
+}
+
+section p {
+    display: block;
+    text-align: justify;
+    padding: 10px 20px 10px 20px;
+    font-weight: lighter;
+    position: relative;
+    top: -42px;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+section a {
+    text-decoration: none;
+    color: #191923;
+}
+
+section a:hover {
+    opacity: 0.8;
+}
+
+

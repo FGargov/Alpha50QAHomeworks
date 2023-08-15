@@ -4,7 +4,7 @@ public class Constants {
 
     /*JIRA API constants*/
     public static final String EMAIL = "fgargov@gmail.com";
-    public static final String JIRA_API_TOKEN = "ATATT3xFfGF0iwRe-jlx3QNfd9UUtf4TwsrrG-OS8mPNa40x5qqKOKix8tkd6INx53kGYA3EU61qppvhZl9xQN8SQnAs_8_0wrs0W3cpn94wmcztbO-cNNKFA_N7-9Ixpf1sxgZufkCH3XC6QlH4uJB97aUcVAHoFj-xpkUrT4EfXBjdIHKrBYs=481F7C21";
+    public static final String JIRA_API_TOKEN = "ATATT3xFfGF0F3r2r8AF63AolSNPDNHXrt5x7CoqWe2Gu0MmGP-1h5712gP8Pm5SZOH5AizA5amC_abDOcy7Wb7IwwV1kSvUf-bm-m5_PrXeTlhuW8OTsw0aY5InZiQ65wcf1hLLVBAXVRqXMhMva809jNtVRp2Iu_B8abEcnRZ537KYGFCTqkw=D5BBE019";
     public static final String BASE_URL = "https://fgargov.atlassian.net";
     public static String DEFAULT_ACCOUNT_ID = "557058:5dfb38de-07c5-4daa-9951-a80fdd626dab";
     public static String ACCOUNT_ID;

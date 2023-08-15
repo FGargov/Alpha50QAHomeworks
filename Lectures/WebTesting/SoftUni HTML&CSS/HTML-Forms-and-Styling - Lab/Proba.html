@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proba</title>
+    <link rel="stylesheet" href="Proba.css">
+</head>
+<body>
+    <label for="first">First name:</label>
+    <input type="text" id="first" name="firstName" value="Nakov" />
+    <label>Password:
+    <input type="password" name="pass" class="proba"/>
+    </label>
+    <textarea name="comments">This is a multi-line text field</textarea>
+
+    <input type="reset" class="proba"/>
+    <input type="submit" value="Apply Now"/>
+    <input type="button" value="Apply Now" />
+    <input type="image" src="P02_LoginForm-font-awesome/img/3.png" alt="Submit"/>
+
+    <form method="post">
+        <div>
+        Username:
+        <input type="text" name="username" required/>
+        </div>
+        <div>
+        Password:
+        <input type="password" name="password"/>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <br>
+    <br>
+    <p><input type="checkbox" name="agree" value="yes"/>I agree</p>
+<br>
+    <input type="radio" name="city" value="1"/>Sofia<br/>
+    <input type="radio" name="city" value="2"/>Plovdiv<br/>
+    <input type="radio" name="city" value="3"/>Varna<br/>
+    <input type="radio" name="city" value="4"/>Burgas<br/>
+    <input type="radio" name="city" value="5"/>Pleven<br/>
+
+    <select name="gender">
+        <option value="Value 1">Male</option>
+        <option value="Value 2" selected="selected">Female</option>
+        <option value="Value 3">Other</option>
+    </select>
+    <br/>
+    <select name="products" multiple="multiple">
+        <option value="202">mouse</option>
+        <option value="171">sound speakers</option>
+        <option value="146" selected="selected">keyboard</option>
+    </select>
+<br/>
+    <select>
+        <optgroup label="Swedish Cars">
+            <option value="saab">Saab</option>
+            <option value="volvo">Volvo</option>
+        </optgroup>
+        <optgroup label="German Cars">
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+        </optgroup>
+    </select>
+    <br>
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+    </datalist>
+<br>
+    <label>First Name
+    <input type="text" id="fn" placeholder="enter name" />
+    </label>
+<br>
+<br>
+    <form method="post" action="form.php">
+        <fieldset>
+            <legend>Customer Details</legend>
+            <input type="text" name="fName" />
+            <input type="text" name="lName" />
+        </fieldset>
+        <fieldset>
+            <legend>Order Details</legend>
+            <input type="text" name="quantity" />
+            <textarea name="remarks"></textarea>
+        </fieldset>
+    </form>
+    <input type="range" min="0" max="100"/>
+    <input type="number" min="0" max="100"/>
+    <input name="backgroundColor" type="color" />
+    <input name="startDate" type="date" />
+    <input type="time" name="arrivalTime" />
+    <input type="datetime-local" name="departure" />
+<input type="month" name="logo" />
+    <input name="start" type="week" />
+    <input type="file" name="start" />
+<input type="search" name="searchQuery" />
+<br>
+<br>
+<input type="text" name="first" tabindex="5" />
+<input type="text" name="second" tabindex="10" />
+</body>
+</html>
