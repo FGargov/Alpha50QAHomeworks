@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Practice I/Practice I" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/PracticeII" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lectures/WebTesting/WEB_Testing" vcs="Git" />
   </component>
 </project>
