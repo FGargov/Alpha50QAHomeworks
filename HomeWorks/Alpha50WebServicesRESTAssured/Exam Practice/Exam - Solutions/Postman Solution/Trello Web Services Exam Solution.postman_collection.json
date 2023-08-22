@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "7afa33fb-8340-4553-a62b-ff0f2b0cacff",
+		"name": "Trello Web Services Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21724215",
+		"_collection_link": "https://planetary-desert-615880.postman.co/workspace/Web-Services-Exam~c485d396-2f8e-4fe6-a0f7-f6136373e22c/collection/21724215-7afa33fb-8340-4553-a62b-ff0f2b0cacff?action=share&source=collection_link&creator=21724215"
+	},
+	"item": [
+		{
+			"name": "Trello Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate your full name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.fullName).to.eql(pm.collectionVariables.get(\"fullName\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{authEndpoint}}?{{authentication}}",
+					"host": [
+						"{{baseUrl}}{{authEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate board name\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql((pm.collectionVariables.get(\"boardName\")).replace(\"{{timestamp}}\", pm.collectionVariables.get(\"timestamp\")));    \r",
+							"    console.log(jsonData.id);\r",
+							"});\r",
+							"\r",
+							"pm.collectionVariables.set(\"boardId\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}{{boardsEndpoint}}?{{authentication}}&name={{boardName}}",
+					"host": [
+						"{{baseUrl}}{{boardsEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": "{{boardName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lists on a Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const bodyData = pm.response.json();\r",
+							"\r",
+							"for (let i = 0; i < bodyData.length; i++) {\r",
+							"    if(bodyData[i].name === \"To Do\") {\r",
+							"        console.log(bodyData[i].id);\r",
+							"        pm.collectionVariables.set(\"toDoListId\", bodyData[i].id);\r",
+							"    }\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{boardsEndpoint}}{{boardLists}}?{{authentication}}",
+					"host": [
+						"{{baseUrl}}{{boardsEndpoint}}{{boardLists}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lists on a Board - query param",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const bodyData = pm.response.json();\r",
+							"\r",
+							"for (let i = 0; i < bodyData.length; i++) {\r",
+							"    if(bodyData[i].name === \"To Do\") {\r",
+							"        console.log(bodyData[i].id);\r",
+							"        pm.collectionVariables.set(\"toDoListId\", bodyData[i].id);\r",
+							"    }\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{boardsEndpoint}}/{{boardId}}?{{authentication}}&lists=all",
+					"host": [
+						"{{baseUrl}}{{boardsEndpoint}}"
+					],
+					"path": [
+						"{{boardId}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "lists",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a List on a Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate list name\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql(pm.collectionVariables.get(\"newListName\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate board id\", function () {\r",
+							"    pm.expect(jsonData.idBoard).to.eql(pm.collectionVariables.get(\"boardId\"));\r",
+							"});\r",
+							"\r",
+							"pm.collectionVariables.set(\"inTestListId\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}{{boardsEndpoint}}{{boardLists}}?{{authentication}}&name={{newListName}}",
+					"host": [
+						"{{baseUrl}}{{boardsEndpoint}}{{boardLists}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": "{{newListName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate card name\", function () {\r",
+							"    var name = pm.collectionVariables.get(\"cardName\").replace(\"{{uniqueName}}\", pm.collectionVariables.get(\"uniqueName\"));\r",
+							"    console.log(name);\r",
+							"    pm.expect(jsonData.name).to.eql(name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate card description\", function () {\r",
+							"    var description = pm.collectionVariables.get(\"cardDescription\").replace(\"{{uniqueName}}\", pm.collectionVariables.get(\"uniqueName\"));\r",
+							"    console.log(description);\r",
+							"    pm.expect(jsonData.desc).to.eql(description);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate list id\", function () {\r",
+							"    pm.expect(jsonData.idList).to.eql(pm.collectionVariables.get(\"toDoListId\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate dateLastActivity is later after the start date of the collection/timestamp\", \r",
+							"function () {\r",
+							"    var dateLastActivity = jsonData.dateLastActivity;\r",
+							"    console.log(pm.collectionVariables.get(\"timestamp2\"));\r",
+							"    console.log(dateLastActivity);  \r",
+							"    pm.expect(Date.parse(dateLastActivity)) >= (Date.parse(pm.collectionVariables.get(\"timestamp2\")));\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.collectionVariables.set(\"cardId\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}{{cardsEndpoint}}?{{authentication}}&idList={{toDoListId}}&name={{cardName}}&desc={{cardDescription}}",
+					"host": [
+						"{{baseUrl}}{{cardsEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "idList",
+							"value": "{{toDoListId}}"
+						},
+						{
+							"key": "name",
+							"value": "{{cardName}}"
+						},
+						{
+							"key": "desc",
+							"value": "{{cardDescription}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card - Cover color",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate cover color\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var cover = jsonData.cover;\r",
+							"    console.log(cover.color);\r",
+							"    pm.expect(cover.color).to.eql(\"lime\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cover\": {\r\n        \"color\": \"lime\",\r\n        \"brightness\": \"light\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}{{cardEndpoint}}?{{authentication}}",
+					"host": [
+						"{{baseUrl}}{{cardEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card - Move to another List Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate list id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.idList).to.eql(pm.collectionVariables.get(\"inTestListId\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}{{cardEndpoint}}?{{authentication}}&idList={{inTestListId}}",
+					"host": [
+						"{{baseUrl}}{{cardEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "idList",
+							"value": "{{inTestListId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card - Name, Description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate card name\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql(pm.collectionVariables.get(\"newCardName\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate card description\", function () {\r",
+							"    pm.expect(jsonData.desc).to.eql(pm.collectionVariables.get(\"newCardDescription\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate card id\", function () {\r",
+							"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"cardId\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cover\": {\r\n        \"color\": \"lime\",\r\n        \"brightness\": \"light\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}{{cardEndpoint}}?{{authentication}}&name={{newCardName}}&desc={{newCardDescription}}",
+					"host": [
+						"{{baseUrl}}{{cardEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": "{{newCardName}}"
+						},
+						{
+							"key": "desc",
+							"value": "{{newCardDescription}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 404\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{boardEndpoint}}?{{authentication}}",
+					"host": [
+						"{{baseUrl}}{{boardEndpoint}}"
+					],
+					"query": [
+						{
+							"key": "{{authentication}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var moment = require(\"moment\");",
+					"pm.collectionVariables.set(\"timestamp\", moment().format((\"YYYY-MM-DD-HH.mm.SS.SSSSSS\")));",
+					"pm.collectionVariables.set(\"timestamp2\", new Date().toISOString()); ",
+					"",
+					"var uniqueName = pm.variables.replaceIn('{{$randomFirstName}}');",
+					"pm.collectionVariables.set(\"uniqueName\", uniqueName);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "timestamp",
+			"value": ""
+		},
+		{
+			"key": "uniqueName",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "fullName",
+			"value": "Diana Gospodinova",
+			"type": "string"
+		},
+		{
+			"key": "boardName",
+			"value": "Web Services Exam {{timestamp}}",
+			"type": "string"
+		},
+		{
+			"key": "boardId",
+			"value": ""
+		},
+		{
+			"key": "newListName",
+			"value": "In Test",
+			"type": "string"
+		},
+		{
+			"key": "inTestListId",
+			"value": ""
+		},
+		{
+			"key": "toDoListId",
+			"value": ""
+		},
+		{
+			"key": "cardId",
+			"value": ""
+		},
+		{
+			"key": "cardName",
+			"value": "My first card with name {{uniqueName}}",
+			"type": "string"
+		},
+		{
+			"key": "cardDescription",
+			"value": "This card with {{uniqueName}} shows update options for a card via Trello API",
+			"type": "string"
+		},
+		{
+			"key": "newCardName",
+			"value": "Card name has been updated",
+			"type": "string"
+		},
+		{
+			"key": "newCardDescription",
+			"value": "Card name and description are updated, tests passed and the card could be deleted",
+			"type": "string"
+		},
+		{
+			"key": "timestamp2",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

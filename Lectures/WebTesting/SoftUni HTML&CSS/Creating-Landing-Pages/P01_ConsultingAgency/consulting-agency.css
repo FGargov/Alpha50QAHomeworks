@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+    word-wrap: break-word;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    width: 1519px;
+}
+
+body header {
+    background: url('images/Layer-759_02.jpg') no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    height: 735px;
+    padding-top: 20px;
+}
+
+header nav {
+    margin: 0 auto;
+    background-color: #BA925E;
+    width: 1100px;
+}
+
+nav .nav-primary li {
+    display: inline-block;
+    padding: 15px;
+    margin: 0 35px;
+}
+
+nav .nav-primary li a {
+    text-decoration: none;
+    color: white;
+}
+
+header section {
+    text-align: center;
+}
+
+header section h1 {
+    text-transform: uppercase;
+    font-size: 4.3em;
+    margin-top: 80px;
+}
+
+header section p {
+    font-size: 1.7em;
+    width: 350px;
+    margin: 0 auto;
+}
+
+header section button {
+    margin: 30px 0;
+    background: #080820;
+    border: 2px solid #080820;
+    border-radius: 4px;
+    padding: 17px 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header section button i {
+    color: #C79D63;
+    margin-left: 4px;
+}
+
+.consulting-rev section button:hover {
+    cursor: pointer;
+    background: #C79D63;
+    color: black;
+    border: 2px solid #C79D63;
+}
+
+.consulting-rev section button:hover > i {
+    color: black;
+}
+
+.main-industries {
+    font-size: 3em;
+    text-align: center;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 2em;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    float: left;
+}
+
+.icon i {
+    position: relative;
+    left: 10px;
+}
+
+.travel-business-customer article {
+    width: 29%;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.travel-business-customer article h2,
+.travel-business-customer article p{
+    text-align: left;
+    margin-left: 58px;
+}
+
+.travel-business-customer article h2 {
+    font-size: 1.2em;
+}
+
+.travel-business-customer article p {
+    font-size: 1.1em;
+}
+
+section {
+    background: url('/images/steel-bg.jpg');
+    background-size: cover;
+}
+
+.banner h2 {
+    text-align: center;
+    font-size: 24px;
+    width: 520px;
+    margin: 0 auto;
+}
+
+.banner h2 span {
+    color: #BE9F73;
+}
+
+.banner {
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 46px;
+    margin-top: 40px;
+    display: block;
+    position: relative;
+}
+
+.banner::after{
+    content: "";
+    background-size: cover;
+    opacity: 0.3;
+    background: url(images/steel-bg.jpg) center center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.traders {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0, 0.6)),
+    url('images/background-choose-us.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.traders h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.traders article {
+    display: inline-block;
+    width: 300px;
+    border: 2px solid #B59F87;
+    vertical-align: top;
+    padding: 20px;
+    height: 150px;
+    margin: 0 13px 10px 13px;
+}
+
+.traders article h4 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.traders a {
+    text-decoration: none;
+}
+
+.traders a:hover article, .traders a:hover article h4, .traders a:hover article p {
+    background: white;
+    color: black;
+}
+
+.traders article p {
+    font-size: 13px;
+    color: white;
+    text-align: justify;
+    padding: 0 10px 0 10px;
+}
+
+.consulting-woman {
+    background: url("images/consulting-woman.jpg") no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin: 0;
+    position: relative;
+}
+
+.testimonial-info {
+   border: 1px solid rgba(255, 255, 255, .7);
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    right: 26px;
+    top: 93px;
+    background: rgba(255, 255, 255, .7);
+}
+
+.testimonial-info p {
+    font-size: 12px;
+    padding: 95px 10px 19px 27px;
+    margin: 0 auto;
+}
+
+.testimonial-info p::before, .testimonial-info p::after {
+    content: open-quote;
+    color: #B4A087;
+    font-size: 30px;
+}
+
+.testimonial-info p::after {
+    content: close-quote;
+}
+
+.testimonial-info .author {
+    background-color: #080820;
+    height: 260px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.testimonial-info .name {
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.author .position {
+    color: #767682;
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.partners {
+    background: white;
+}
+
+.partners ul {
+    text-align: center;
+}
+
+.partners ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.partners img {
+    height: 80px;
+}
+
+.footer {
+    background-color: #080820;
+    padding: 20px;
+    text-align: center;
+}
+
+footer section {
+    display: inline-block;
+    width: 350px;
+    vertical-align: top;
+}
+
+.info-special-container h2 {
+    color: white;
+    text-align: left;
+}
+
+.info-special-container p {
+    color: white;
+    margin: 0 0 10px 38px;
+    text-align: justify;
+    width: 50%;
+}
+
+.info-special-container div a {
+    color: #080820;
+    border-radius: 50%;
+    background: #84828F;
+    padding: 8px;
+    margin: 10px 5px 0 5px;
+    height: 10px;
+}
+
+.socials {
+    margin: 30px 75px 0 0;
+    width: 100px;
+}
+
+.extra-links {
+    color: white;
+    width: 40%;
+}
+
+.extra-links h2 {
+    margin-right: 80px;
+}
+
+.extra-links div {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 0 -21px 0 30px;
+}
+
+.extra-links div a {
+    color: #B59C97;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+}
+
+.instagram-widget h2 {
+    color: white;
+}
+
+.instagram-widget ul {
+    width: 216px;
+    margin: 0 0 0 116px;
+    padding: 0;
+}
+
+.instagram-widget ul li{
+    display: inline-block;
+}
+
+.instagram-widget ul li img {
+    width: 69px;
+    height: 69px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

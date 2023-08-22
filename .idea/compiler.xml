@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="RESTAssured-EXAM-Skeleton (3)" />
         <module name="RESTAssured-EXAM-Skeleton (1)" />
         <module name="RESTAssured-EXAM-Skeleton (2)" />
         <module name="RESTAssured-DEMO (1)" />
@@ -18,6 +19,7 @@
     <bytecodeTargetLevel>
       <module name="RESTAssured-DEMO" target="11" />
       <module name="RESTAssured-EXAM-Skeleton" target="11" />
+      <module name="RESTAssured-EXAM-Solution" target="11" />
       <module name="WebServicesExam" target="11" />
     </bytecodeTargetLevel>
   </component>
