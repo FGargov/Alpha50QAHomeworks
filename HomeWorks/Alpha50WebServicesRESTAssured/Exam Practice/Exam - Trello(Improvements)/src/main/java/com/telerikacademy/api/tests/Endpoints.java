@@ -14,10 +14,6 @@ public class Endpoints {
     public static final String AUTH_ENDPOINT = format("%s%s", API_VERSION, "/members/me");
 
 
-    public static final String LISTS_ENDPOINT = format("%s%s", API_VERSION, "/lists");
-
-
-
     public static final String CARDS_ENDPOINT = format("%s%s", API_VERSION, "/cards");
 
     public static final String CARD_ENDPOINT = format("%s%s", API_VERSION, "/cards/{id}");

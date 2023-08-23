@@ -11,15 +11,17 @@
         <module name="RESTAssured-EXAM-Skeleton (2)" />
         <module name="RESTAssured-DEMO (1)" />
         <module name="RESTAssured-DEMO (2)" />
+        <module name="RESTAssured-EXAM-Solution" />
+        <module name="WebServicesRESTAssuredDemoTwo" />
         <module name="PracticeOne" />
         <module name="PracticeII" />
         <module name="MavenAssuredPractice" />
+        <module name="SeleniumWebDriverPartOne" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="RESTAssured-DEMO" target="11" />
       <module name="RESTAssured-EXAM-Skeleton" target="11" />
-      <module name="RESTAssured-EXAM-Solution" target="11" />
       <module name="WebServicesExam" target="11" />
     </bytecodeTargetLevel>
   </component>

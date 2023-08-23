@@ -14,13 +14,10 @@ public class Constants {
     public static final String FULL_NAME = "Filip Gargov";
     public static final String BOARD_NAME = "First Board - exam";
 
-    public static final String BOARD_DESCRIPTION = "My first board with Postman API.";
-
     public static final String LIST_NAME = "My first List on an exam board";
     public static final String CARD_NAME = "My first card";
     public static final String CARD_DESCRIPTION = "First card created with Postman API.";
 
     public static final String NEW_CARD_NAME = "Updated card title name.";
     public static final String NEW_CARD_DESCRIPTION = "Updated card description";
-    public static final String COVER_COLOR = "red";
 }
