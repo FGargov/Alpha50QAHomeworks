@@ -6,22 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="WebDriveOnePracticeHw" />
+        <module name="RESTAssured-DEMO (1)" />
+        <module name="RESTAssured-DEMO (2)" />
+        <module name="SauseDemoTests (2)" />
+        <module name="PracticeII" />
+        <module name="SauseDemoTests (1)" />
+        <module name="SeleniumWebDriverPartOne" />
+        <module name="SeleniumWebDriverPartOneHomework" />
         <module name="RESTAssured-EXAM-Skeleton (3)" />
         <module name="RESTAssured-EXAM-Skeleton (1)" />
         <module name="RESTAssured-EXAM-Skeleton (2)" />
-        <module name="RESTAssured-DEMO (1)" />
-        <module name="RESTAssured-DEMO (2)" />
         <module name="RESTAssured-EXAM-Solution" />
+        <module name="test-automation-framework" />
+        <module name="SauceDemoTests" />
         <module name="WebServicesRESTAssuredDemoTwo" />
         <module name="PracticeOne" />
-        <module name="PracticeII" />
         <module name="MavenAssuredPractice" />
-        <module name="SeleniumWebDriverPartOne" />
+        <module name="Sauce_Demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="RESTAssured-DEMO" target="11" />
       <module name="RESTAssured-EXAM-Skeleton" target="11" />
+      <module name="SauseDemoTests" target="11" />
       <module name="WebServicesExam" target="11" />
     </bytecodeTargetLevel>
   </component>
