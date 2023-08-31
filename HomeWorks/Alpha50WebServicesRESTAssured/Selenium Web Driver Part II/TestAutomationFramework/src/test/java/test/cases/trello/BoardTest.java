@@ -1,5 +1,6 @@
 package test.cases.trello;
 
+import api.TrelloApi;
 import pages.trello.BoardPage;
 import pages.trello.BoardsPage;
 
@@ -24,16 +25,6 @@ public class BoardTest extends BaseTest {
     @Test
     public void createNewCardInExistingBoardWhenCreateCardClicked() {
         login();
-
-        BoardPage boardPage = new BoardPage(actions.getDriver());
-        boardPage.clickOnBoard("My First Board");
-
-        boardPage.addCardToList("New Test Card");
-
-        // API: Create a board
-        // API: Create a list
-
-        // API: Cleanup board
     }
 
     @Ignore
