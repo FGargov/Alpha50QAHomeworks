@@ -27,10 +27,11 @@ public class BaseTest {
     public ShoppingCartPage shoppingCartPage;
     public CheckYourInformationPage checkYourInformationPage;
     public CheckoutOverviewPage checkoutOverviewPage;
+    public CheckoutCompletePage checkoutCompletePage;
 
     @BeforeEach
     public void setUp_beforeEachTest() {
-        driver = startBrowser(BrowserTypes.FIREFOX);
+        driver = startBrowser(BrowserTypes.CHROME);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         loginPage = new LoginPage(driver, wait);
@@ -38,6 +39,7 @@ public class BaseTest {
         shoppingCartPage = new ShoppingCartPage(driver, wait);
         checkYourInformationPage = new CheckYourInformationPage(driver, wait);
         checkoutOverviewPage = new CheckoutOverviewPage(driver, wait);
+        checkoutCompletePage = new CheckoutCompletePage(driver, wait);
 
         // Navigate to Google.com
         driver.get("https://www.saucedemo.com/");

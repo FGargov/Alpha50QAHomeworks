@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class InventoryPage extends BasePage {
     public InventoryPage(WebDriver webDriver, WebDriverWait driverWait) {
         super(webDriver, driverWait, "inventory.html");
@@ -14,6 +16,7 @@ public class InventoryPage extends BasePage {
 
     public By shoppingCartLink = By.className("shopping_cart_link");
     public By pageTitle = By.xpath("//span[@class='title' and text()='Products']");
+    private By cartBadge = By.className("shopping_cart_badge");
 
     public void addProductByTitle(String title) {
         var container =  driver.findElement(By.xpath(String.format("//div[@class='inventory_item' and descendant::div[text()='%s']]", title)));
@@ -29,5 +32,7 @@ public class InventoryPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(title));
     }
 
-
+    public List<WebElement> getCardBadge() {
+        return driver.findElements(cartBadge);
+    }
 }

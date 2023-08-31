@@ -16,10 +16,13 @@ public class ShoppingCartPage extends BasePage {
     private By itemsList = By.className("inventory_item_name");
     private By checkoutButton = By.id("checkout");
 
+
     public void checkoutButtonClick() {
         driver.findElement(checkoutButton).click();
     }
     public List<WebElement> getItems() {
         return driver.findElements(itemsList);
     }
+
+
 }

@@ -69,38 +69,33 @@ public class ProductsTests extends BaseTest {
         //        refreshSauceDemoWebsite();
     }
 
-    /*@Test
+    @Test
     public void orderCompleted_when_addProduct_and_checkout_withConfirm(){
-        // Add Backpack and T-shirt to shopping cart
-        addProductsToShoppingCart(backpackTitle, shirtTitle);
+        inventoryPage.addProductByTitle(backpackTitle);
+        inventoryPage.addProductByTitle(shirtTitle);
+        inventoryPage.clickShoppingCartLink();
 
-        // Click on shopping Cart
-        driver.findElement(By.className("shopping_cart_link")).click();
+        // Assert Items and Totals
+        shoppingCartPage.checkoutButtonClick();
 
-        // Fill Contact Details
-        driver.findElement(By.id("checkout")).click();
+        // fill form
+        checkYourInformationPage.fillShippingDetails("Fname", "lname", "zip");
+        checkYourInformationPage.continueButtonClick();
 
-        fillShippingDetails("FirstName", "LastName", "zip Code");
-        driver.findElement(By.id("continue")).click();
+        var items = shoppingCartPage.getItems();
+        Assertions.assertEquals(2, items.size(), "Items count not as expected");
 
-        // Complete Order
-        driver.findElement(By.id("finish")).click();
-
-        // Assert Complete Message
-        WebElement checkoutCompleteText = driver.findElement(By.xpath("//span[@class='title']"));
-        Assertions.assertEquals("Checkout: Complete!", checkoutCompleteText.getText(),
+        checkoutCompletePage.clickFinishButton();
+        Assertions.assertEquals("Checkout: Complete!", checkoutCompletePage.getCheckoutCompleteText(),
                 "Checkout is not successful");
 
         // Assert Items removed from Shopping Cart
-        driver.findElement(By.className("shopping_cart_link")).click();
+        inventoryPage.clickShoppingCartLink();
 
-        List<WebElement> cartBadge = driver.findElements(By.className("shopping_cart_badge"));
-        if (cartBadge.isEmpty()) {
+        if (inventoryPage.getCardBadge().isEmpty()) {
             Assertions.assertTrue(true, "Shopping cart is empty");
         } else {
             Assertions.fail("Shopping cart is not empty");
         }
-
-        //        refreshSauceDemoWebsite();
-    }*/
+    }
 }
