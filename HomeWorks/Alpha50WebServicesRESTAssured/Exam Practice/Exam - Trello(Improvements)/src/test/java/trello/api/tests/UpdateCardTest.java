@@ -11,7 +11,7 @@
 //import static com.telerikacademy.api.tests.Endpoints.CARDS_ENDPOINT;
 //import static com.telerikacademy.api.tests.Helper.isValid;
 //import static com.telerikacademy.api.tests.JSONRequests.UPDATE_CARD;
-//import static io.restassured.RestAssured.baseURI;
+//import static io.restassured.RestAssured.baseURI; 
 //import static java.lang.String.format;
 //import static org.apache.http.HttpStatus.SC_OK;
 //

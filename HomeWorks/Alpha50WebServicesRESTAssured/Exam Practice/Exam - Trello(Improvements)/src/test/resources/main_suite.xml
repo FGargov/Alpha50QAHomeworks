@@ -3,13 +3,10 @@
 <suite name="Main Suite">
     <test name="JIRA API Homework">
         <classes>
-            <class name="jira.api.tests.UserTest"/>
-            <class name="jira.api.tests.CreateIssueTest"/>
-            <class name="jira.api.tests.AssigneeTest"/>
-            <class name="jira.api.tests.PriorityTest"/>
-            <class name="jira.api.tests.TransitionsTest"/>
-            <class name="jira.api.tests.AttachmentsTest"/>
-            <class name="jira.api.tests.LinkIssuesTest"/>
+            <class name="trello.api.tests.AuthenticationTest"/>
+            <class name="trello.api.tests.BoardTest"/>
+            <class name="trello.api.tests.ListTest"/>
+            <class name="trello.api.tests.CardTest"/>
         </classes>
     </test>
 </suite>

@@ -13,10 +13,22 @@
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Exam - Trello/pom.xml" />
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Exam - Trello(Improvements)/pom.xml" />
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Exam Practice/Exam - Solutions/REST Assured Solution/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver I/Web Services REST Assured Demo Two/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver I/WebServicesRESTAssuredDemoTwo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver I/WebServicesRESTAssuredWebDriverDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Selenium Web Driver Part I/SeleniumWebDriverPartOne/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/SeleniumWebDriverPartOneHomework/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Selenium-WebDriverOnePracticeHomework/WebDriveOnePracticeHw/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Assassment/SeleniumWebDriverPracticeHWBuddyGroup/Bobi/Sauce Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Assassment/SeleniumWebDriverPracticeHWBuddyGroup/Petar/SauseDemoTests/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Assassment/SeleniumWebDriverPracticeHWBuddyGroup/Boris/Sauce Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver II/SauceDemoTestsWithPageObjects/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver II/TestAutomationFramework/pom.xml" />
+        <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver II/SauceDemoTestsWithPageObjectsPractice/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
