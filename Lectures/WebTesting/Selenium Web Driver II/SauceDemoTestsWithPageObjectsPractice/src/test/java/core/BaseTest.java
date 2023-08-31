@@ -16,7 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.time.Duration;
+import java.util.Locale;
 
 public class BaseTest {
 
@@ -85,6 +88,14 @@ public class BaseTest {
 
     protected WebElement getProductByTitle(String title) {
         return driver.findElement(By.xpath(String.format("//div[@class='inventory_item' and descendant::div[text()='%s']]", title)));
+    }
+
+    protected static void getDecimalSeparator() {
+        // Fix a problem with the comma separator in order to compare price correctly
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        symbols.setDecimalSeparator('.');
+        symbols.setGroupingSeparator(',');
+        DecimalFormat decimalFormat = new DecimalFormat("###,##0.00", symbols);
     }
 
     protected static void fillShippingDetails(String firstName, String lastName, String zip) {

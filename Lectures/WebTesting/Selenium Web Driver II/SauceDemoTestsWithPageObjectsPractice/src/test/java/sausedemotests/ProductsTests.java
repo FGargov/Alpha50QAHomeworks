@@ -24,6 +24,7 @@ public class ProductsTests extends BaseTest {
         inventoryPage.addProductByTitle(shirtTitle);
         inventoryPage.clickShoppingCartLink();
 
+        shoppingCartPage.assertNavigate();
 
         // Assert Items and Totals
         var items = shoppingCartPage.getItems();
@@ -45,6 +46,8 @@ public class ProductsTests extends BaseTest {
         // Assert Items and Totals
         shoppingCartPage.checkoutButtonClick();
 
+        checkYourInformationPage.assertNavigate();
+
         // fill form
         checkYourInformationPage.fillShippingDetails("Fname", "lname", "zip");
         checkYourInformationPage.continueButtonClick();
@@ -55,11 +58,7 @@ public class ProductsTests extends BaseTest {
         var actualTotalPrice = checkoutOverviewPage.getTotalPriceNumber();
         double expectedTotalPrice = 29.99 + 15.99 + 3.68;
 
-        // Fix a problem with the comma separator in order to compare price correctly
-        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
-        symbols.setDecimalSeparator('.');
-        symbols.setGroupingSeparator(',');
-        DecimalFormat decimalFormat = new DecimalFormat("###,##0.00", symbols);
+        getDecimalSeparator();
 
         Assertions.assertEquals(2, items.size(), "Items count not as expected");
         Assertions.assertEquals(backpackTitle, items.get(0).getText(), "Item title not as expected");
@@ -70,7 +69,7 @@ public class ProductsTests extends BaseTest {
     }
 
     @Test
-    public void orderCompleted_when_addProduct_and_checkout_withConfirm(){
+    public void orderCompleted_when_addProduct_and_checkout_withConfirm() {
         inventoryPage.addProductByTitle(backpackTitle);
         inventoryPage.addProductByTitle(shirtTitle);
         inventoryPage.clickShoppingCartLink();
@@ -85,12 +84,14 @@ public class ProductsTests extends BaseTest {
         var items = shoppingCartPage.getItems();
         Assertions.assertEquals(2, items.size(), "Items count not as expected");
 
+
         checkoutCompletePage.clickFinishButton();
+        checkoutCompletePage.assertNavigate();
         Assertions.assertEquals("Checkout: Complete!", checkoutCompletePage.getCheckoutCompleteText(),
                 "Checkout is not successful");
 
         // Assert Items removed from Shopping Cart
-        inventoryPage.clickShoppingCartLink();
+        //inventoryPage.clickShoppingCartLink();
 
         if (inventoryPage.getCardBadge().isEmpty()) {
             Assertions.assertTrue(true, "Shopping cart is empty");
