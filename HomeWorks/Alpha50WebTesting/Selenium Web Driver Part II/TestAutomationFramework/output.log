@@ -1,9 +1,15 @@
-2023-09-01 02:23:03,678 INFO  [main] Initializing WebDriver
-2023-09-01 02:23:06,274 INFO  [main] Initializing WebDriver
-2023-09-01 02:23:06,277 INFO  [main] Initializing WebDriver
-2023-09-01 02:23:07,313 INFO  [main] Clicking on element trello.loginPage.loginButton
-2023-09-01 02:23:10,058 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
-2023-09-01 02:23:14,614 INFO  [main] Initializing WebDriver
-2023-09-01 02:23:14,696 INFO  [main] Clicking on element trello.boardsPage.boardByTeamAndName
-2023-09-01 02:23:23,214 INFO  [main] Clicking on element trello.deleteBoard.showBoardMenu
-2023-09-01 02:23:23,270 INFO  [main] Quitting WebDriver
+2023-09-01 13:38:17,700 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:19,314 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:19,316 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:19,316 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:19,317 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:20,145 INFO  [main] Clicking on element trello.loginPage.loginButton
+2023-09-01 13:38:22,394 INFO  [main] Clicking on element trello.loginPage.loginSubmitButton
+2023-09-01 13:38:26,602 INFO  [main] Clicking on element trello.boardsPage.boardByTeamAndName
+2023-09-01 13:38:27,305 INFO  [main] Clicking on element trello.deleteBoard.showBoardMenu
+2023-09-01 13:38:27,370 INFO  [main] Clicking on element trello.deleteBoard.closeBoardLink
+2023-09-01 13:38:27,399 INFO  [main] Clicking on element trello.deleteBoard.closeBoardConfirmLink
+2023-09-01 13:38:28,048 INFO  [main] Clicking on element trello.deleteBoard.permanentlyDeleteLink
+2023-09-01 13:38:28,089 INFO  [main] Clicking on element trello.deleteBoard.confirmPermanentlyDeleteButton
+2023-09-01 13:38:28,118 INFO  [main] Initializing WebDriver
+2023-09-01 13:38:28,119 INFO  [main] Quitting WebDriver

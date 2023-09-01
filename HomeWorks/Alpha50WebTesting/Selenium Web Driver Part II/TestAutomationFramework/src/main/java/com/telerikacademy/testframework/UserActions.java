@@ -6,13 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
-import static com.telerikacademy.testframework.Utils.LOGGER;
-import static com.telerikacademy.testframework.Utils.getConfigPropertyByKey;
-import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
-import static com.telerikacademy.testframework.Utils.getWebDriver;
-import static com.telerikacademy.testframework.Utils.tearDownWebDriver;
+import static com.telerikacademy.testframework.Utils.*;
 import static java.lang.String.format;
 
 public class UserActions {

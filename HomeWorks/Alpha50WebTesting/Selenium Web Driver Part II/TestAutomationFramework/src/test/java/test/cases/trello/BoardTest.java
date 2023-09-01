@@ -1,29 +1,32 @@
 package test.cases.trello;
 
-import org.junit.Assert;
+import org.junit.*;
+import org.junit.runners.MethodSorters;
 import pages.trello.BoardPage;
 import pages.trello.BoardsPage;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BoardTest extends BaseTest {
+    private BoardPage boardPage;
+    private BoardsPage boardsPage;
 
+    @Before
+    public void pagesSetup() {
+        boardPage = new BoardPage(actions.getDriver());
+        boardsPage = new BoardsPage(actions.getDriver());
+    }
     @Test
-    public void createBoardWhenCreateBoardClicked() {
+    public void test1_createBoardWhenCreateBoardClicked() {
         login();
 
-        BoardsPage boardsPage = new BoardsPage(actions.getDriver());
         boardsPage.createBoard();
 
-        BoardPage boardPage = new BoardPage(actions.getDriver());
         boardPage.assertAddListExists();
     }
     @Test
-    public void createNewCardInExistingBoardWhenCreateCardClicked() {
+    public void test2_createNewCardInExistingBoardWhenCreateCardClicked() {
         login();
 
-        BoardPage boardPage = new BoardPage(actions.getDriver());
         boardPage.openBoard();
         boardPage.addCardToList();
 
@@ -32,24 +35,22 @@ public class BoardTest extends BaseTest {
 
     @Ignore
     @Test
-    public void moveCardBetweenStatesWhenDragAndDropIsUsed() {
+    public void test3_moveCardBetweenStatesWhenDragAndDropIsUsed() {
         login();
 
-        BoardPage boardPage = new BoardPage(actions.getDriver());
         boardPage.openBoard();
         boardPage.addCardToList();
     }
 
     @Test
-    public void deleteBoardWhenDeleteButtonIsClicked() {
+    public void test4_deleteBoardWhenDeleteButtonIsClicked() {
         login();
 
-        BoardPage boardPage = new BoardPage(actions.getDriver());
         boardPage.openBoard();
 
         boardPage.deleteBoard();
 
-
         BoardsPage boardsPage = new BoardsPage(actions.getDriver());
+       // boardsPage.assertBoardExist(); - няма да мине защото вече няма такъв борд след като сме изтрили.
     }
 }

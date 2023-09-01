@@ -38,10 +38,6 @@ public class BoardPage extends BaseTrelloPage {
         actions.waitForElementPresent("trello.boardPage.lastCreatedCardName", myLastCard);
     }
 
-    public void assertBoardExist() {
-        actions.waitForElementPresent("trello.boardName");
-    }
-
     public void clickOnBoard(String boardName) {
         actions.waitForElementVisible("trello.boardsPage.boardByTeamAndName", boardName);
         actions.clickElement("trello.boardsPage.boardByTeamAndName", boardName);
@@ -56,9 +52,10 @@ public class BoardPage extends BaseTrelloPage {
     }
 
     public void deleteBoard() {
-        //actions.waitForElementPresent("trello.deleteBoard.showBoardMenu");
+        actions.waitForElementPresent("trello.deleteBoard.showBoardMenu");
         actions.clickElement("trello.deleteBoard.showBoardMenu");
 
+        actions.waitForElementVisible("trello.deleteBoard.closeBoardLink");
         actions.clickElement("trello.deleteBoard.closeBoardLink");
         actions.clickElement("trello.deleteBoard.closeBoardConfirmLink");
 

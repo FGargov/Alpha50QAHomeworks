@@ -6,32 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WebDriveOnePracticeHw" />
-        <module name="RESTAssured-DEMO (1)" />
-        <module name="RESTAssured-DEMO (2)" />
-        <module name="SauseDemoTests (2)" />
-        <module name="SauseDemoTests (1)" />
-        <module name="PracticeII" />
-        <module name="SeleniumWebDriverPartOne" />
-        <module name="SeleniumWebDriverPartOneHomework" />
-        <module name="RESTAssured-EXAM-Skeleton (3)" />
         <module name="test-automation-framework (1)" />
         <module name="test-automation-framework (2)" />
-        <module name="RESTAssured-EXAM-Skeleton (1)" />
-        <module name="RESTAssured-EXAM-Skeleton (2)" />
-        <module name="RESTAssured-EXAM-Solution" />
+        <module name="test-automation-framework (3)" />
         <module name="SauceDemoTests" />
         <module name="WebServicesRESTAssuredDemoTwo" />
-        <module name="PracticeOne" />
         <module name="MavenAssuredPractice" />
-        <module name="Sauce_Demo" />
+        <module name="SauseDemoTests" />
+        <module name="RESTAssured-DEMO" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RESTAssured-DEMO" target="11" />
+      <module name="PracticeII" target="11" />
+      <module name="PracticeOne" target="20" />
+      <module name="RESTAssured-DEMO (1)" target="11" />
+      <module name="RESTAssured-DEMO (2)" target="11" />
       <module name="RESTAssured-EXAM-Skeleton" target="11" />
-      <module name="SauseDemoTests" target="11" />
+      <module name="RESTAssured-EXAM-Skeleton (1)" target="11" />
+      <module name="RESTAssured-EXAM-Skeleton (2)" target="11" />
+      <module name="RESTAssured-EXAM-Skeleton (3)" target="11" />
+      <module name="RESTAssured-EXAM-Solution" target="11" />
+      <module name="Sauce_Demo" target="11" />
+      <module name="SauseDemoTests (1)" target="11" />
+      <module name="SauseDemoTests (2)" target="11" />
+      <module name="SeleniumWebDriverPartOne" target="20" />
+      <module name="SeleniumWebDriverPartOneHomework" target="11" />
       <module name="test-automation-framework" target="11" />
+      <module name="WebDriveOnePracticeHw" target="1.8" />
       <module name="WebServicesExam" target="11" />
     </bytecodeTargetLevel>
   </component>
