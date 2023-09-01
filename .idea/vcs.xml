@@ -2,11 +2,13 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Assassment/Selenium WebDriver II HW/Boris" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Assassment/Selenium WebDriver II HW/Daniela" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Assassment/Selenium WebDriver II HW/Petar" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Assassment/SeleniumWebDriverPracticeHWBuddyGroup/Petar/SauseDemoTests" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Exam Practice/Practice I/Practice I" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Exam Practice/PracticeII" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Selenium Web Driver Part II/TestAutomationFrameworkHW" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/HomeWorks/Alpha50WebTesting/Selenium-WebDriverOnePracticeHomework" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Lectures/WebTesting/WEB_Testing" vcs="Git" />
   </component>

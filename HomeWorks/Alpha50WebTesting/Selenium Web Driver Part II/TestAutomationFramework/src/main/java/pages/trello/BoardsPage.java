@@ -1,6 +1,5 @@
 package pages.trello;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
@@ -31,9 +30,5 @@ public class BoardsPage extends BaseTrelloPage {
     public void clickOnBoard(String boardName) {
         actions.waitForElementVisible("trello.boardsPage.boardByTeamAndName");
         actions.clickElement("trello.boardsPage.boardByTeamAndName", boardName);
-    }
-
-    public void assertBoardExist() {
-        actions.waitForElementPresent("trello.boardName");
     }
 }

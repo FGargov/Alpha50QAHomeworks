@@ -4,12 +4,17 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
-import static com.telerikacademy.testframework.Utils.*;
+import static com.telerikacademy.testframework.Utils.LOGGER;
+import static com.telerikacademy.testframework.Utils.getConfigPropertyByKey;
+import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
+import static com.telerikacademy.testframework.Utils.getWebDriver;
+import static com.telerikacademy.testframework.Utils.tearDownWebDriver;
 import static java.lang.String.format;
 
 public class UserActions {
@@ -44,6 +49,23 @@ public class UserActions {
         String locator = getLocatorValueByKey(field, fieldArguments);
         WebElement element = driver.findElement(By.xpath(locator));
         element.sendKeys(value);
+    }
+
+    public void dragAndDropElement(String fromElementLocator, String toElementLocator) {
+
+        String fromLocator = getLocatorValueByKey(fromElementLocator);
+        WebElement fromElement = driver.findElement(By.xpath(fromLocator));
+
+        String toLocator = getLocatorValueByKey(toElementLocator);
+        WebElement toElement = driver.findElement(By.xpath(toLocator));
+
+        Actions actions = new Actions(driver);
+
+        Action dragAndDrop = actions.clickAndHold(fromElement)
+                .moveToElement(toElement)
+                .release(toElement)
+                .build();
+        dragAndDrop.perform();
     }
 
     //############# WAITS #########

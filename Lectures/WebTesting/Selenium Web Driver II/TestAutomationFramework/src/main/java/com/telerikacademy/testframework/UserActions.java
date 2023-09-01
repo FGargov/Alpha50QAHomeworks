@@ -101,7 +101,7 @@ public class UserActions {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         String xpath = getLocatorValueByKey(locator, locatorArguments);
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpath)));
         } catch (Exception exception) {
             Assert.fail("Element with locator: '" + xpath + "' was not found.");
         }
@@ -128,4 +128,5 @@ public class UserActions {
             Assert.fail("Element with locator: '" + xpath + "' was not found.");
         }
     }
+
 }

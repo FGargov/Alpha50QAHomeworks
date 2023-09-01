@@ -9,6 +9,7 @@
         <module name="test-automation-framework (1)" />
         <module name="test-automation-framework (2)" />
         <module name="test-automation-framework (3)" />
+        <module name="test-automation-framework (4)" />
         <module name="SauceDemoTests" />
         <module name="WebServicesRESTAssuredDemoTwo" />
         <module name="MavenAssuredPractice" />

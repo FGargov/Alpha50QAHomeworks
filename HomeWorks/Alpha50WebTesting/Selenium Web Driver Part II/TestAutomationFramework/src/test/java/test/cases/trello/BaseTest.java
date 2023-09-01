@@ -14,7 +14,6 @@ public class BaseTest {
     public static void setUp() {
 
         UserActions.loadBrowser("trello.homePage");
-
     }
 
     @AfterClass
