@@ -15,10 +15,11 @@
         <module name="SeleniumWebDriverPartOne" />
         <module name="SeleniumWebDriverPartOneHomework" />
         <module name="RESTAssured-EXAM-Skeleton (3)" />
+        <module name="test-automation-framework (1)" />
+        <module name="test-automation-framework (2)" />
         <module name="RESTAssured-EXAM-Skeleton (1)" />
         <module name="RESTAssured-EXAM-Skeleton (2)" />
         <module name="RESTAssured-EXAM-Solution" />
-        <module name="test-automation-framework" />
         <module name="SauceDemoTests" />
         <module name="WebServicesRESTAssuredDemoTwo" />
         <module name="PracticeOne" />
@@ -30,6 +31,7 @@
       <module name="RESTAssured-DEMO" target="11" />
       <module name="RESTAssured-EXAM-Skeleton" target="11" />
       <module name="SauseDemoTests" target="11" />
+      <module name="test-automation-framework" target="11" />
       <module name="WebServicesExam" target="11" />
     </bytecodeTargetLevel>
   </component>

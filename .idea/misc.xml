@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -26,6 +27,7 @@
         <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver II/TestAutomationFramework/pom.xml" />
         <option value="$PROJECT_DIR$/Lectures/WebTesting/Selenium Web Driver II/SauceDemoTestsWithPageObjectsPractice/pom.xml" />
         <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Selenium Web Driver Part II/TestAutomationFramework/pom.xml" />
+        <option value="$PROJECT_DIR$/HomeWorks/Alpha50WebServicesRESTAssured/Assassment/Selenium WebDriver II HW/Daniela/TestAutomationFramework/pom.xml" />
       </list>
     </option>
   </component>
