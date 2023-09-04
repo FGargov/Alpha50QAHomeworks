@@ -7,6 +7,10 @@ import org.junit.*;
 import pages.trello.BoardPage;
 import pages.trello.BoardsPage;
 
+import java.util.List;
+
+import static org.apache.http.HttpStatus.SC_OK;
+
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BoardTest extends BaseTest {
     private TrelloApi trelloApi;
@@ -25,15 +29,8 @@ public class BoardTest extends BaseTest {
 
     @Test
     public void test1_createBoardWhenCreateBoardClicked() {
+        //става излишен?
         //API: Cleanup board
-
-        login();
-
-        BoardsPage boardsPage = new BoardsPage(actions.getDriver());
-        boardsPage.createBoard();
-
-        BoardPage boardPage = new BoardPage(actions.getDriver());
-        boardPage.assertAddListExists();
 
  /*       login();
 
@@ -44,16 +41,14 @@ public class BoardTest extends BaseTest {
 
     @Test
     public void test2_createNewCardInExistingBoardWhenCreateCardClicked() {
+        ListModel responseList = trelloApi.createList(createdBoard.id, "ListNameTest2");
+        trelloApi.createCard(responseList.id, "CardNameTest2");
 
-
+        Assert.assertEquals(responseList.status.toString(), SC_OK, "Incorrect status code");
+        Assert.assertEquals("The list name is not the same",responseList.name, "ListNameTest2");
         //API: Create a board
         //API: Create a list
         //API: Delete board
-        //Assert.assertTrue(createdBoardResponse.statusCode() == HttpStatus.SC_OK);
-
-
-
-
 
         /*login();
 
@@ -74,29 +69,6 @@ public class BoardTest extends BaseTest {
         trelloApi.createCard(responseListFrom.id, "CardNameAuto");
 
         actions.dragAndDropElement("trello.boardPage.cardByName", "trello.boardPage.listByName");
-        //API: Create a board
-        //API: Create a list
-        //API: Create a card
-        //API: Cleanup board
-
-
-
-
-
-    /*    login();
-
-        boardPage.openBoard();
-        boardPage.createList();
-        String cardName = getUIMappingByKey("trello.cardName");
-        boardPage.addCardToList(cardName);
-
-        String targetListName = getUIMappingByKey("trello.targetListName");
-        String firstListName = getUIMappingByKey("trello.firstListName");
-
-        boardPage.moveCardToList(cardName, targetListName);
-
-        boardPage.assertCardInList(cardName, targetListName);
-        boardPage.assertCardNotInList(firstListName, cardName);*/
     }
 
     @Test
