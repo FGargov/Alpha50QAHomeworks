@@ -64,9 +64,8 @@ public class BoardTest extends BaseTest {
         login();
 
         boardPage.openBoard();
-
         boardPage.deleteBoard();
 
-        BoardsPage boardsPage = new BoardsPage(actions.getDriver());
+        boardPage.assertBoardDeleted();
     }
 }
