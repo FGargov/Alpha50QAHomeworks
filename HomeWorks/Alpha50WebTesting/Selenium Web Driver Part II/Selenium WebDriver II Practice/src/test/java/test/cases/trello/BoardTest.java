@@ -1,14 +1,17 @@
 package test.cases.trello;
 
 import api.BoardModel;
+import api.CardModel;
 import api.ListModel;
 import api.TrelloApi;
+import io.restassured.response.Response;
 import org.junit.*;
 import pages.trello.BoardPage;
 import pages.trello.BoardsPage;
 
 import java.util.List;
 
+import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
 import static org.apache.http.HttpStatus.SC_OK;
 
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -29,7 +32,7 @@ public class BoardTest extends BaseTest {
 
     @Test
     public void test1_createBoardWhenCreateBoardClicked() {
-        //става излишен?
+        //става излишен и няма смисъл да се прави.
         //API: Cleanup board
 
  /*       login();
@@ -42,10 +45,13 @@ public class BoardTest extends BaseTest {
     @Test
     public void test2_createNewCardInExistingBoardWhenCreateCardClicked() {
         ListModel responseList = trelloApi.createList(createdBoard.id, "ListNameTest2");
-        trelloApi.createCard(responseList.id, "CardNameTest2");
+        CardModel responseCard = trelloApi.createCard(responseList.id, "CardNameTest2");
 
-        Assert.assertEquals(responseList.status.toString(), SC_OK, "Incorrect status code");
-        Assert.assertEquals("The list name is not the same",responseList.name, "ListNameTest2");
+        String expectedListName = "ListNameTest2";
+        String expectedCardName = "CardNameTest2";
+
+        Assert.assertEquals("The list name is not the same", responseList.name, expectedListName);
+        Assert.assertEquals("The card name is not the same", responseCard.name, expectedCardName);
         //API: Create a board
         //API: Create a list
         //API: Delete board
@@ -66,13 +72,28 @@ public class BoardTest extends BaseTest {
     public void test3_moveCardBetweenStatesWhenDragAndDropIsUsed() {
         ListModel responseListFrom = trelloApi.createList(createdBoard.id, "ListNameAutoFrom");
         ListModel responseListTo = trelloApi.createList(createdBoard.id, "ListNameAutoTo");
-        trelloApi.createCard(responseListFrom.id, "CardNameAuto");
+        CardModel responseCard = trelloApi.createCard(responseListFrom.id, "CardNameAuto");
+
+        String expectedListFromName = responseListFrom.name;
+        String expectedListToName = responseListTo.name;
+        String expectedCardToName = responseCard.name;
+
+        Assert.assertEquals("The list From name is not the same", responseListFrom.name, expectedListFromName);
+        Assert.assertEquals("The list To name is not the same", responseListTo.name, expectedListToName);
 
         actions.dragAndDropElement("trello.boardPage.cardByName", "trello.boardPage.listByName");
+
+        // Трябва да се рефакторира.
+     /*   public void assertCardInList(String cardName, String listName) {
+            actions.waitForElementPresent("trello.checkIfCard.IsInList", cardName, listName);
+        }*/
+
+
     }
 
     @Test
     public void test4_deleteBoardWhenDeleteButtonIsClicked() {
+        //няма смисъл да се прави
         // API: Create a board
         ///API: Delete board
 

@@ -63,7 +63,7 @@ public class TrelloApi {
                 .as(ListModel.class);
     }
 
-    public Response createCard(String listId, String name){
+    public CardModel createCard(String listId, String name){
         return getRestAssured()
                 .when()
                 .queryParam("name", name)
@@ -71,7 +71,8 @@ public class TrelloApi {
                 .post("/cards")
                 .then()
                 .extract()
-                .response();
+                .response()
+                .as(CardModel.class);
     }
 
     // API: Create 2 lists
