@@ -13,6 +13,7 @@ import java.util.List;
 
 import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
 import static org.apache.http.HttpStatus.SC_OK;
+import static org.junit.Assert.assertEquals;
 
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BoardTest extends BaseTest {
@@ -50,8 +51,8 @@ public class BoardTest extends BaseTest {
         String expectedListName = "ListNameTest2";
         String expectedCardName = "CardNameTest2";
 
-        Assert.assertEquals("The list name is not the same", responseList.name, expectedListName);
-        Assert.assertEquals("The card name is not the same", responseCard.name, expectedCardName);
+        assertEquals("The list name is not the same", responseList.name, expectedListName);
+        assertEquals("The card name is not the same", responseCard.name, expectedCardName);
         //API: Create a board
         //API: Create a list
         //API: Delete board
@@ -78,8 +79,8 @@ public class BoardTest extends BaseTest {
         String expectedListToName = responseListTo.name;
         String expectedCardToName = responseCard.name;
 
-        Assert.assertEquals("The list From name is not the same", responseListFrom.name, expectedListFromName);
-        Assert.assertEquals("The list To name is not the same", responseListTo.name, expectedListToName);
+        assertEquals("The list From name is not the same", responseListFrom.name, expectedListFromName);
+        assertEquals("The list To name is not the same", responseListTo.name, expectedListToName);
 
         actions.dragAndDropElement("trello.boardPage.cardByName", "trello.boardPage.listByName");
 
@@ -87,8 +88,6 @@ public class BoardTest extends BaseTest {
      /*   public void assertCardInList(String cardName, String listName) {
             actions.waitForElementPresent("trello.checkIfCard.IsInList", cardName, listName);
         }*/
-
-
     }
 
     @Test

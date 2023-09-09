@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -17,7 +18,7 @@ public class BingSearchByTermTest {
 
     @BeforeAll
     public static void classSetup() {
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));//Това означава, че всеки път, когато извикате driver.findElement(), WebDriver ще изчака до 4 секунди, преди да се откаже да намери елемента и да репортува грешка.
 
         driver.get("https://bing.com");
