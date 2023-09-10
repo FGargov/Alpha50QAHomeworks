@@ -1,7 +1,7 @@
-package com.telerikacademy.testframework.pages;
+package com.telerikacademy.seleniumframework.pages;
 
-import com.telerikacademy.testframework.UserActions;
-import com.telerikacademy.testframework.Utils;
+import com.telerikacademy.seleniumframework.UserActions;
+import com.telerikacademy.seleniumframework.Utils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

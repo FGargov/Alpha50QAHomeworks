@@ -1,4 +1,4 @@
-package com.telerikacademy.testframework;
+package com.telerikacademy.seleniumframework;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-import static com.telerikacademy.testframework.Utils.LOGGER;
-import static com.telerikacademy.testframework.Utils.getConfigPropertyByKey;
-import static com.telerikacademy.testframework.Utils.getUIMappingByKey;
-import static com.telerikacademy.testframework.Utils.getWebDriver;
-import static com.telerikacademy.testframework.Utils.tearDownWebDriver;
+import static com.telerikacademy.seleniumframework.Utils.LOGGER;
+import static com.telerikacademy.seleniumframework.Utils.getConfigPropertyByKey;
+import static com.telerikacademy.seleniumframework.Utils.getUIMappingByKey;
+import static com.telerikacademy.seleniumframework.Utils.getWebDriver;
+import static com.telerikacademy.seleniumframework.Utils.tearDownWebDriver;
 import static java.lang.String.format;
 
 public class UserActions {
@@ -148,19 +148,28 @@ public class UserActions {
         }
     }
 
+    public void waitFor(long timeOutMilliseconds) {
+        try {
+            LOGGER.info("Waitong for " + timeOutMilliseconds);
+            Thread.sleep(timeOutMilliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void hoverElement(String key, Object... arguments) {
         // TODO: Implement the method
         // 1. Get locator value from properties by key
         // 2. Add Log entry for the action to be performed
         // 3. Perform a hover Action
 
-/*        String locator = getLocatorValueByKey(key, arguments);
+        String locator = getLocatorValueByKey(key, arguments);
 
         LOGGER.info("Hovering over" + key);
 
         Actions actions = new Actions(getWebDriver());
         WebElement element = getWebDriver().findElement(By.xpath(locator));
-        actions.moveToElement(element).build().perform();*/
+        actions.moveToElement(element).build().perform();
 
     }
 
@@ -177,14 +186,13 @@ public class UserActions {
         // 4. return true/false if the element is/not present
 
 
-       /* String xpath = getLocatorValueByKey(locator, arguments);
+        String xpath = getLocatorValueByKey(locator, arguments);
         WebDriverWait wait = new WebDriverWait(getWebDriver(), Duration.ofSeconds(5));
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         } catch (Exception e) {
             return false;
         }
-        */
         return true;
     }
 }

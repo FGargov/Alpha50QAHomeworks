@@ -1,4 +1,4 @@
-package com.telerikacademy.testframework;
+package com.telerikacademy.seleniumframework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

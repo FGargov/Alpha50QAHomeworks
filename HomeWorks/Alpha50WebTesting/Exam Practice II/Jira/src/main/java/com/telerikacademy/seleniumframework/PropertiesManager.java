@@ -1,11 +1,11 @@
-package com.telerikacademy.testframework;
+package com.telerikacademy.seleniumframework;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
-import static com.telerikacademy.testframework.Utils.LOGGER;
+import static com.telerikacademy.seleniumframework.Utils.LOGGER;
 
 public class PropertiesManager {
 

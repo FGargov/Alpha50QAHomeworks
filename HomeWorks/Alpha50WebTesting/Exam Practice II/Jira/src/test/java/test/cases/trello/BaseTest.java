@@ -1,10 +1,9 @@
 package test.cases.trello;
 
-import pages.trello.LoginPage;
-
-import com.telerikacademy.testframework.UserActions;
+import com.telerikacademy.seleniumframework.UserActions;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import pages.jira.LoginPage;
 
 public class BaseTest {
 
@@ -13,7 +12,7 @@ public class BaseTest {
     @BeforeClass
     public static void setUp() {
 
-        UserActions.loadBrowser("trello.homePage");
+        UserActions.loadBrowser("jira.homePage");
     }
 
     @AfterClass
@@ -23,7 +22,6 @@ public class BaseTest {
     }
 
     public void login() {
-
         LoginPage loginPage = new LoginPage(actions.getDriver());
         loginPage.loginUser("user");
     }
