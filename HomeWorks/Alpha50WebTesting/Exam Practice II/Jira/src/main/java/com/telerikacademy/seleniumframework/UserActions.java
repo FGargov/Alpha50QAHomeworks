@@ -2,6 +2,7 @@ package com.telerikacademy.seleniumframework;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -194,5 +195,10 @@ public class UserActions {
             return false;
         }
         return true;
+    }
+
+    public void pressKey(Keys key) {
+       Actions actions = new Actions(getWebDriver());
+       actions.sendKeys(key).perform();
     }
 }

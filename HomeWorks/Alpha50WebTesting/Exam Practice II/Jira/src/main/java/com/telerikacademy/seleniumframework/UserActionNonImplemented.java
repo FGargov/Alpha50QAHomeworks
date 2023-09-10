@@ -53,12 +53,6 @@ public class UserActionNonImplemented {
         // 2. Get expected url by urlKey from Properties
     }
 
-    public void pressKey(Keys key) {
-        // TODO: Implement the method
-        // 1. Initialize Actions
-        // 2. Perform key press
-    }
-
     public String getElementAttribute(String locator, String attributeName) {
         // TODO: Implement the method
         // 1. Find Element using the locator value from Properties

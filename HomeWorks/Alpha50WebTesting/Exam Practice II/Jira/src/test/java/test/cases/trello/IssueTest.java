@@ -32,4 +32,13 @@ public class IssueTest extends BaseTest {
 
         issuePage.assertBugIsCreated();
     }
+
+    @Test
+    public void test3_linkBugToStory() {
+        login();
+
+        issuePage.linkBugToStory();
+
+        issuePage.assertCorrectRelationStatus();
+    }
 }

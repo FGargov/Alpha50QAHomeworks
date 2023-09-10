@@ -33,8 +33,8 @@ public class IssuesPage extends BaseJiraPage {
 
         actions.typeValueInField(Story.DESCRIPTION.getString(), "jira.createIssueFormDescription");
 
-        /*actions.clickElement("jira.createIssueFormPriorityType");
-        actions.clickElement("jira.createIssueFormPriorityTypeSelection");*/
+        actions.clickElement("jira.createIssueFormPriorityType");
+        actions.clickElement("jira.createIssueFormPriorityTypeSelection");
 
         actions.clickElement("jira.createIssueFormCreateButton");
 
@@ -62,8 +62,8 @@ public class IssuesPage extends BaseJiraPage {
 
         actions.typeValueInField(Bug.DESCRIPTION.getString(), "jira.createIssueFormDescription");
 
-        /*actions.clickElement("jira.createIssueFormPriorityType");
-        actions.clickElement("jira.createIssueFormPriorityTypeSelection");*/
+        actions.clickElement("jira.createIssueFormPriorityType");
+        actions.clickElement("jira.createIssueFormPriorityTypeSelection");
 
         actions.clickElement("jira.createIssueFormCreateButton");
 
