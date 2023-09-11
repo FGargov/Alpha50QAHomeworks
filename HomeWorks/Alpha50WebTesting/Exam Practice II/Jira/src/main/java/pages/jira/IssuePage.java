@@ -14,17 +14,17 @@ public class IssuePage extends BaseJiraPage {
     }
 
     public void linkBugToStory() {
-        actions.waitForElementClickable("jira.dashboardPage.jiraSoftware");
+        /*actions.waitForElementClickable("jira.dashboardPage.jiraSoftware");
         actions.clickElement("jira.dashboardPage.jiraSoftware");
 
         actions.waitForElementClickable("jira.dashboardPage.projectsButton");
         actions.clickElement("jira.dashboardPage.projectsButton");
 
         actions.waitForElementClickable("jira.dashboard.recentProject");
-        actions.clickElement("jira.dashboard.recentProject");
+        actions.clickElement("jira.dashboard.recentProject");*/
 
-        actions.waitForElementClickable("jira.sidebarMenu.issues");
-        actions.clickElement("jira.sidebarMenu.issues");
+        /*actions.waitForElementClickable("jira.sidebarMenu.issues");
+        actions.clickElement("jira.sidebarMenu.issues");*/
 
         actions.waitForElementClickable("jira.issuesPage.lastCreatedBug");
         actions.clickElement("jira.issuesPage.lastCreatedBug");
@@ -46,7 +46,8 @@ public class IssuePage extends BaseJiraPage {
     }
 
     public void assertBugIsCreated() {
-        String issueXPath = String.format(getUIMappingByKey("jira.issuesPage.createdBugName"), Bug.TITLE.getString());
+        actions.waitFor(4000);
+        String issueXPath = String.format(getUIMappingByKey("jira.issuesPage.lastCreatedBug"), Bug.TITLE.getString());
         actions.waitForElementPresent(issueXPath);
     }
 

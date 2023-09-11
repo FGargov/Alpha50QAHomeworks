@@ -1,5 +1,6 @@
 package pages.jira;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pages.jira.enums.Bug;
 import pages.jira.enums.Story;
@@ -26,9 +27,11 @@ public class IssuesPage extends BaseJiraPage {
 
         actions.waitForElementClickable("jira.createIssueFormIssueType");
         actions.clickElement("jira.createIssueFormIssueType");
+        actions.waitForElementClickable("jira.createIssueFormIssueTypeStorySelection");
         actions.clickElement("jira.createIssueFormIssueTypeStorySelection");
 
         actions.waitForElementClickable("jira.createIssueFormSummaryField");
+        actions.clickElement("jira.createIssueFormSummaryField");
         actions.typeValueInField(Story.TITLE.getString(),"jira.createIssueFormSummaryField");
 
         actions.typeValueInField(Story.DESCRIPTION.getString(), "jira.createIssueFormDescription");
@@ -42,20 +45,21 @@ public class IssuesPage extends BaseJiraPage {
     }
 
     public void createIssueBug() {
-        actions.waitForElementClickable("jira.dashboardPage.jiraSoftware");
+      /*  actions.waitForElementClickable("jira.dashboardPage.jiraSoftware");
         actions.clickElement("jira.dashboardPage.jiraSoftware");
 
         actions.waitForElementClickable("jira.dashboardPage.projectsButton");
         actions.clickElement("jira.dashboardPage.projectsButton");
 
         actions.waitForElementClickable("jira.dashboard.recentProject");
-        actions.clickElement("jira.dashboard.recentProject");
+        actions.clickElement("jira.dashboard.recentProject");*/
 
         actions.clickElement("jira.header.createButton");
 
         actions.waitForElementClickable("jira.createIssueFormIssueType");
         actions.clickElement("jira.createIssueFormIssueType");
-        actions.clickElement("jira.createIssueFormIssueTypeBugSelection");
+        actions.waitForElementClickable("jira.createIssueFormIssueTypeStorySelection");
+        actions.clickElement("jira.createIssueFormIssueTypeStorySelection");
 
         actions.waitForElementClickable("jira.createIssueFormSummaryField");
         actions.typeValueInField(Bug.TITLE.getString(),"jira.createIssueFormSummaryField");
@@ -67,6 +71,8 @@ public class IssuesPage extends BaseJiraPage {
 
         actions.clickElement("jira.createIssueFormCreateButton");
 
-        actions.clickElement("jira.sidebarMenu.issues");
+        actions.waitFor(2000);
+        driver.navigate().refresh();
+        //actions.clickElement("jira.sidebarMenu.issues");
     }
 }

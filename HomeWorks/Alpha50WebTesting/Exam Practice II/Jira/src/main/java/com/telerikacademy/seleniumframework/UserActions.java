@@ -199,6 +199,6 @@ public class UserActions {
 
     public void pressKey(Keys key) {
        Actions actions = new Actions(getWebDriver());
-       actions.sendKeys(key).perform();
+       actions.sendKeys(key).build().perform();
     }
 }

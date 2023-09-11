@@ -1,10 +1,13 @@
 package test.cases.trello;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import pages.jira.IssuePage;
 import pages.jira.IssuesPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class IssueTest extends BaseTest {
     private IssuesPage issuesPage;
     private  IssuePage issuePage;
@@ -26,7 +29,7 @@ public class IssueTest extends BaseTest {
 
     @Test
     public void test2_createNewBug_when_CreateButtonClicked() {
-        login();
+        //login();
 
         issuesPage.createIssueBug();
 
@@ -35,7 +38,7 @@ public class IssueTest extends BaseTest {
 
     @Test
     public void test3_linkBugToStory() {
-        login();
+        //login();
 
         issuePage.linkBugToStory();
 

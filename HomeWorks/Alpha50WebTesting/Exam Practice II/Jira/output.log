@@ -1,18 +1,38 @@
-2023-09-11 01:52:45,814 INFO  [main] Initializing WebDriver
-2023-09-11 01:52:47,756 INFO  [main] Initializing WebDriver
-2023-09-11 01:52:47,757 INFO  [main] Initializing WebDriver
-2023-09-11 01:52:47,757 INFO  [main] Initializing WebDriver
-2023-09-11 01:52:47,758 INFO  [main] Initializing WebDriver
-2023-09-11 01:52:49,750 INFO  [main] Clicking on element jira.loginPage.continueButton
-2023-09-11 01:52:50,469 INFO  [main] Clicking on element jira.loginPage.loginButton
-2023-09-11 01:52:53,632 INFO  [main] Clicking on element jira.dashboardPage.jiraSoftware
-2023-09-11 01:52:56,337 INFO  [main] Clicking on element jira.dashboardPage.projectsButton
-2023-09-11 01:52:56,441 INFO  [main] Clicking on element jira.dashboard.recentProject
-2023-09-11 01:52:56,579 INFO  [main] Clicking on element jira.header.createButton
-2023-09-11 01:52:57,971 INFO  [main] Clicking on element jira.createIssueFormIssueType
-2023-09-11 01:52:58,036 INFO  [main] Clicking on element jira.createIssueFormIssueTypeStorySelection
-2023-09-11 01:52:59,450 INFO  [main] Clicking on element jira.createIssueFormPriorityType
-2023-09-11 01:52:59,555 INFO  [main] Clicking on element jira.createIssueFormPriorityTypeSelection
-2023-09-11 01:52:59,591 INFO  [main] Clicking on element jira.createIssueFormCreateButton
-2023-09-11 01:52:59,675 INFO  [main] Clicking on element jira.sidebarMenu.issues
-2023-09-11 01:53:00,948 INFO  [main] Quitting WebDriver
+2023-09-11 12:08:22,209 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:23,896 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:23,897 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:23,897 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:23,898 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:25,941 INFO  [main] Clicking on element jira.loginPage.continueButton
+2023-09-11 12:08:26,597 INFO  [main] Clicking on element jira.loginPage.loginButton
+2023-09-11 12:08:29,471 INFO  [main] Clicking on element jira.dashboardPage.jiraSoftware
+2023-09-11 12:08:32,289 INFO  [main] Clicking on element jira.dashboardPage.projectsButton
+2023-09-11 12:08:32,392 INFO  [main] Clicking on element jira.dashboard.recentProject
+2023-09-11 12:08:32,524 INFO  [main] Clicking on element jira.header.createButton
+2023-09-11 12:08:33,780 INFO  [main] Clicking on element jira.createIssueFormIssueType
+2023-09-11 12:08:33,896 INFO  [main] Clicking on element jira.createIssueFormIssueTypeStorySelection
+2023-09-11 12:08:33,939 INFO  [main] Clicking on element jira.createIssueFormSummaryField
+2023-09-11 12:08:34,780 INFO  [main] Clicking on element jira.createIssueFormPriorityType
+2023-09-11 12:08:34,901 INFO  [main] Clicking on element jira.createIssueFormPriorityTypeSelection
+2023-09-11 12:08:34,935 INFO  [main] Clicking on element jira.createIssueFormCreateButton
+2023-09-11 12:08:35,026 INFO  [main] Clicking on element jira.sidebarMenu.issues
+2023-09-11 12:08:36,461 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:36,462 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:36,462 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:36,462 INFO  [main] Clicking on element jira.header.createButton
+2023-09-11 12:08:36,708 INFO  [main] Clicking on element jira.createIssueFormIssueType
+2023-09-11 12:08:37,112 INFO  [main] Clicking on element jira.createIssueFormIssueTypeStorySelection
+2023-09-11 12:08:39,549 INFO  [main] Clicking on element jira.createIssueFormPriorityType
+2023-09-11 12:08:39,686 INFO  [main] Clicking on element jira.createIssueFormPriorityTypeSelection
+2023-09-11 12:08:39,722 INFO  [main] Clicking on element jira.createIssueFormCreateButton
+2023-09-11 12:08:39,799 INFO  [main] Waitong for 2000
+2023-09-11 12:08:41,809 INFO  [main] Waitong for 4000
+2023-09-11 12:08:45,831 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:45,832 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:45,832 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:45,858 INFO  [main] Clicking on element jira.issuesPage.lastCreatedBug
+2023-09-11 12:08:46,676 INFO  [main] Clicking on element jira.createdBug.LinkIssueButton
+2023-09-11 12:08:47,425 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:47,482 INFO  [main] Clicking on element jira.createdBug.linkButton
+2023-09-11 12:08:47,543 INFO  [main] Initializing WebDriver
+2023-09-11 12:08:47,566 INFO  [main] Quitting WebDriver
