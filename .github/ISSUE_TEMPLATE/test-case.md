@@ -7,34 +7,37 @@ assignees: ''
 
 ---
 
-Narrative/Description:
+Objective: {what's the purpose of the test}
 
-In order to create a new forum topic
+# Environment
 
-As an existing user
+* {codebase and database}
 
-I populate valid content and submit the form.
+# Pre-conditions
 
-Preconditions:
+1. {environment setup}
+2. {any tests that need to be run first}
 
-Staging forum:  
+# Direct URL(s)
 
-An existing user that is successfully registered and logged in
+1. {URLs that will be used in the test steps}
 
-The user has access to the forum section, where they can create a new topic
+# Input data
 
-Test Steps:
+1. {some sort of title}
+    * {data}
 
-Click the button 'New Topic'
+# Prerequisites
 
-Enter a relevant and descriptive title for the new topic in the provided field:“Create a topic successfully with a title length between 5 and 255 symbols (one sentence)“
+1. {instructions for setting up test}
 
-Enter a descriptive topic content:“Hello QAs,This is a topic that tests a successful creation of a topic.All fields are populated with valid data. Kind Regards,Didi“
+# Instructions
 
-Click the button 'Create Topic'
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>{what a tester should do}</td><td>{what a tester should see when they do that}</td></tr>
+</table>
 
-Expected result:
+# Notes
 
-The ‘Create a new Topic’ window disappeared
-
-The user is redirected to the topic view
+* {any notes}
